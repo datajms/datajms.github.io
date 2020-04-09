@@ -42,7 +42,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: #0085a1;
+  color: #b71520;
 }
 blockquote {
   color: #808080;
@@ -98,12 +98,12 @@ div.panel-body a.list-group-item.view-all {
 ::-moz-selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #b71520;
 }
 ::selection {
   color: white;
   text-shadow: none;
-  background: #0085a1;
+  background: #b71520;
 }
 img::selection {
   color: white;
@@ -158,7 +158,7 @@ img {
 .navbar-custom .navbar-brand:focus ,
 .navbar-custom .nav li a:hover,
 .navbar-custom .nav li a:focus {
-  color: #0085a1;
+  color: #b71520;
 }
 
 .navbar-custom .navbar-brand-logo {
@@ -360,7 +360,7 @@ footer .theme-by {
 .post-preview a:focus,
 .post-preview a:hover {
   text-decoration: none;
-  color: #0085a1;
+  color: #b71520;
 }
 
 .post-preview .post-title {
@@ -653,8 +653,8 @@ footer .theme-by {
 .pager li a:hover,
 .pager li a:focus {
   color: #FFF;
-  background: #0085a1;
-  border: 1px solid #0085a1;
+  background: #b71520;
+  border: 1px solid #b71520;
 }
 
 .pager {
@@ -767,11 +767,11 @@ div.splitbox div.right {
     padding: 15px 25px;
   }
 }
-.disqus-comments button:hover, 
+.disqus-comments button:hover,
 .disqus-comments button:focus {
   color: #FFF;
-  background: #0085a1;
-  border: 1px solid #0085a1;
+  background: #b71520;
+  border: 1px solid #b71520;
 }
 
 /* Related posts */
