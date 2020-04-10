@@ -6,10 +6,20 @@
     <description>Recent content in Posts on data science ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Apr 2020 16:51:53 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2020 16:51:53 +0200</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Simplifying the French Covid-19 patient orientation algorithm</title>
+      <link>/post/01_covid_scoring_system_presentation/</link>
+      <pubDate>Thu, 09 Apr 2020 16:51:53 +0200</pubDate>
+      
+      <guid>/post/01_covid_scoring_system_presentation/</guid>
+      <description>The ongoing Covid-19 outbreak has made it essential for authorities to manage how populations in need should contact either general practitioners or emergency medical services. In France, an official orientation algorithm has been released to give recommendations to patients, depending on their symptoms and medical history.
+After slightly simplifying this official decision tree, I present an original contribution: a Covid-19 orientation scoring system which is logically equivalent. Being the other type of decision-aid algorithm largely used in medicine, scoring systems offer a better understanding of the relative importance of the different factors.</description>
+    </item>
     
     <item>
       <title>Lorem Ipsum</title>

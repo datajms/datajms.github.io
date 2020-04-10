@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Simplifying the French Covid-19 patient orientation algorithm - data science ideas</title>
+  <meta name="description" content="From a decision tree to a point-based scoring system"><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "data science ideas",
+    
+    "url": "\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "\/post\/01_covid_scoring_system_presentation\/",
+          "name": "Simplifying the french covid 19 patient orientation algorithm"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Jean-Matthieu Schertzer"
+  },
+  "headline": "Simplifying the French Covid-19 patient orientation algorithm",
+  "description" : "The ongoing Covid-19 outbreak has made it essential for authorities to manage how populations in need should contact either general practitioners or emergency medical services. In France, an official orientation algorithm has been released to give recommendations to patients, depending on their symptoms and medical history.\nAfter slightly simplifying this official decision tree, I present an original contribution: a Covid-19 orientation scoring system which is logically equivalent. Being the other type of decision-aid algorithm largely used in medicine, scoring systems offer a better understanding of the relative importance of the different factors.",
+  "inLanguage" : "en",
+  "wordCount":  2226 ,
+  "datePublished" : "2020-04-09T16:51:53",
+  "dateModified" : "2020-04-09T16:51:53",
+  "image" : "\/",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "\/post\/01_covid_scoring_system_presentation\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Simplifying the French Covid-19 patient orientation algorithm" />
+<meta property="og:description" content="From a decision tree to a point-based scoring system">
+<meta property="og:url" content="/post/01_covid_scoring_system_presentation/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="data science ideas" />
+
+  <meta name="twitter:title" content="Simplifying the French Covid-19 patient orientation algorithm" />
+  <meta name="twitter:description" content="From a decision tree to a point-based scoring system">
+  <meta name="twitter:card" content="summary" />
+  <meta name="generator" content="Hugo 0.68.3" />
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="data science ideas"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" /><link rel="stylesheet" href="/css/syntax.css" /><link rel="stylesheet" href="/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+
+<script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-162779469-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">data science ideas</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Simplifying the French Covid-19 patient orientation algorithm</h1>
+              
+              
+              
+                
+                  <h2 class="post-subheading">From a decision tree to a point-based scoring system</h2>
+                
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on April 9, 2020
+  
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Jean-Matthieu Schertzer
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>The ongoing Covid-19 outbreak has made it essential for authorities to manage how populations in need should contact either general practitioners or emergency medical services.
+In France, an official orientation algorithm has been released to give recommendations to patients, depending on their symptoms and medical history.</p>
+<p>After slightly simplifying this official decision tree, I present an original contribution: a Covid-19 orientation scoring system which is logically equivalent.
+Being the other type of decision-aid algorithm largely used in medicine, scoring systems offer a better understanding of the relative importance of the different factors.
+Using Covid-19 orientation illustrations, a comparative analysis is carried out concerning decision trees and scoring systems.</p>
+<h2 id="context-and-objectives-of-the-blog-post">Context and objectives of the blog post</h2>
+<p>The Covid-19 outbreak in France challenges its healthcare system ability to care and treat patients.
+In this context, an efficient orientation of potential patients is a pre-requisite to improve <strong>reactivity and good use of scarce resources</strong>: medical emergency telephone lines and medical emergency vehicles.</p>
+<p>In early April 2020 and under population containment, the French strategy has been to promote real-time tele-consultation<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> with general practitioners and other physicians when possible, so that emergency services are less overwhelmed.
+As presented in the next section, an <strong>orientation algorithm</strong> has been built in France to give personal recommendations to the potential patients, depending on their symptoms and background medical profile and history.</p>
+<p>First of all, this blog post gives some additional context to the <strong>official orientation algorithm</strong>.
+Secondly, a slightly <strong>simplified version</strong> of the official decision tree is presented.
+Thirdly, the simplified decision tree is transformed into a <strong>point-based scoring system</strong>, the other type of decision-aid algorithm largely used in medicine.
+<strong>Pros and cons</strong> of both algorithm types are discussed in a comparative analysis, illustrated by the Covid-19 orientation problem.</p>
+<p>The <strong>original contribution</strong> of this blog post is the <strong>weights of the scoring system</strong>, which are logically equivalent to the simplified decision tree !
+Furthermore, this post <strong>defends the view</strong> that scoring systems have an intrinsic way (their weights) to highlight the <strong>factors that plays an important role</strong> in the algorithm.
+Decision trees does not have this property, although they have other strengths.
+The <strong>main point</strong> is that all algorithm builders<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> should systematically <strong>think about the best way</strong> to present their work depending on the problem they address and the intended use.</p>
+<h2 id="the-official-patient-questionnaire-and-decision-tree">The official patient questionnaire and decision tree</h2>
+<p>The <a href="https://www.pasteur.fr/en">Institut Pasteur</a> (a private non-profit research foundation on diseases) and <a href="https://www.aphp.fr/">AP-HP</a> (a world-renowned university hospital, composed by 39 hospitals) released an official tool to help patient orientation to relevant medical services:</p>
+<ul>
+<li>a 22-item questionnaire for patients</li>
+<li>an decision tree algorithm to process questionnaire answers into recommendations</li>
+<li>an exact wording for the patient recommendations.</li>
+</ul>
+<p>You will find the main implementation <a href="https://maladiecoronavirus.fr/">here</a>, which has been promoted by the official Department of Health <a href="https://solidarites-sante.gouv.fr/soins-et-maladies/maladies/maladies-infectieuses/coronavirus/tout-savoir-sur-le-covid-19/">Covid-19 portal</a>, under the heading &ldquo;<em>Do I have the coronavirus?</em>&quot;.
+All documentation is in French on a <a href="https://delegation-numerique-en-sante.github.io/covid19-algorithme-orientation/">dedicated website</a> (more details <a href="https://github.com/Delegation-numerique-en-sante/covid19-algorithme-orientation">here</a> for the curious).</p>
+<p>On the 30th of March 2020 version, there are the three types of questions: <strong>symptoms</strong> (fever, cough, diarrhea, anosmia, sore throat or muscle aches), <strong>risk factors</strong> (age, body mass index, pregnancy status, chronic conditions and current medication) and <strong>severity factors</strong> (major or minor one).</p>
+<p>Then, there are eight possible official patient recommendations, but some of these recommendations are very similar and can be grouped.
+In the next section, I present a possible simplification of the orientation decision tree.</p>
+<h2 id="a-simplified-patient-orientation-decision-tree">A simplified patient orientation decision tree</h2>
+<p>From the official decision tree, 2 simplifications are made:</p>
+<ol>
+<li>The official decision tree only considers people over 15 years of age. Instead of explicitly using  a branch (denoted END1) to test for this case, I have removed it. No loss of information though, as one can add a note that explains that the new simplified tree applies only to those over 15 years of age.</li>
+<li>As mentioned previously, some recommendations (originally denoted by END2, END3, &hellip;, END8) are very similar. In the simplified decision tree version, they are grouped into three outcomes:
+<ul>
+<li>No action required (END2, END8)</li>
+<li>Schedule a tele-consultation (END3, END4, END6, END7)</li>
+<li>Call emergency services (END5)</li>
+</ul>
+</li>
+</ol>
+<p>With these two changes, the simplified patient orientation decision tree becomes more compact and readable:
+<img src="/img/post/01_simplified_decision_tree.png" alt="Simplified orientation decision tree"></p>
+<p>Note that both official and simplified decision trees rely on a list of risk factors and severity factors:
+<img src="/img/post/01_simplified_factors.png" alt="Simplified risk and severity factors"></p>
+<p>Hereafter, I take the simplified decision tree as a reference.
+I will present an equivalent point-based scoring system which gives the same recommendation for every possible case.
+The motivation for a scoring system is its ability to quickly capture the most important factors of an algorithm (see final section for more details).</p>
+<h2 id="an-equivalent-point-based-scoring-system">An equivalent point-based scoring system</h2>
+<p>First, a few words about terminology.
+Scoring system means that a decision variable (the score) is built by adding, subtracting or multiplying a few meaningful numbers<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.
+Point-based insists on the fact that i. the score involves integer numbers and ii. thresholds are used to make decisions from the score.</p>
+<p>Point-based scoring system are largely used in medical applications.
+For example, CHA<sub>2</sub>DS<sub>2</sub>VASc<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> is used on a daily basis in cardiology departments as a decision-aid tool to prescribe anticoagulants to mitigate the stroke risk for patients with atrial fibrillation.
+It is a sum of 8 contributions (0pt, 1pt or 2pt) with indicative thresholds to separate low, medium and high risk patients.</p>
+<p>Going back to the Covid-19 patient orientation problem, here is a proposal of a point-based scoring system, equivalent with the simplified decision tree:
+<img src="/img/post/01_orientation_score.png" alt="Equivalent orientation score"></p>
+<p>As a potential patient, summing points and comparing it to the decision thresholds leads to a personal recommendation.
+In the right column of the figure above, age (53y), risk factors (0) and minor severity factors (0) results in 6 points.
+Presence of cough adds another 2 and anosmia increase the final score by 1.
+Then, the patient deduces its recommended action (schedule a tele-consultation).</p>
+<h2 id="decision-tree-vs-scoring-system-a-comparative-analysis">Decision tree vs Scoring system: a comparative analysis</h2>
+<p>This section is a very brief discussion about merits of scoring systems compared to decision trees.
+Note that both algorithms are largely used: for example, Lip et al. presented both a scoring system and a clinical flowchart (an action-oriented decision tree) in their <a href="https://cardiopapers.com.br/wp-content/uploads/2011/01/chest.pdf">2010 paper</a><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> (Table 2 and Figure 1) introducing CHA<sub>2</sub>DS<sub>2</sub>VASc.
+Applied to machine learning, both trees and scoring systems are the building blocks of hardly any interpretable predictive model.
+In his 2019 interpretable machine learning <a href="https://christophm.github.io/interpretable-ml-book/">book</a>, Molnar common presents interpretable models, which almost<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> all fall into the scoring system family<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>, tree family<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>(similar to rule-based models) or both<sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup>.</p>
+<p>Coming back to the simplified Covid-19 orientation problem, there is not a clear winner between the decision trees and the scoring systems.
+They of course have both strengths and weaknesses, detailed below.
+However, the point of this post is to insist on the value of having a scoring system formulation.</p>
+<p>The table below presents a synthesis of a comparative analysis, illustrated by Covid-19 patient story and factor importance discussion.
+The comparative analysis addresses the different phases of an algorithm life: <strong>Build</strong>, <strong>Implementation</strong> and the <strong>User perspective during the &ldquo;Run&rdquo;</strong>.
+The latter refers to the patient&rsquo;s ability to understand his/her situation (Local importance understanding) and to understand the main decision drivers of the whole algorithm (Global importance understanding).</p>
+<style type="text/css">
+.tg .tg-cent{text-align:center;vertical-align:center; font-size: 16px}
+.tg .tg-left{text-align:left;vertical-align:centre; font-size: 13px}
+</style>
+<br>
+<table class="tg">
+  <tr>
+    <th class="tg-cent">Phases</th>
+    <th class="tg-cent">Criteria</th>
+    <th class="tg-cent">Arguments in favour of Decision Trees (DTree)</th>
+    <th class="tg-cent">Arguments in favour of Scoring Systems (SSys)</th>
+  </tr>
+  <tr>
+    <td rowspan="2" class="tg-cent"><b>Build</b></td>
+    <td class="tg-cent"><b>Choice:</b> the typical problem addressed</td>
+    <td class="tg-left">+ DTree are well suited to capture factor interactions.</td>
+    <td class="tg-left">+ SSys are well suited to capture gradual and accumulative effects of factors.</td>
+  </tr>
+  <tr>
+    <td class="tg-cent"><b>Easiness of design by experts</b></td>
+    <td class="tg-left">+ DTree processes cases by cases, successively and exhaustively, while SSys do not.</td>
+    <td class="tg-left"></td>
+  </tr>
+  <tr>
+    <td rowspan="2" class="tg-cent"><b>Implement</b></td>
+    <td class="tg-cent"><b>Technical</b></td>
+    <td class="tg-left" colspan="2">Both DTree and SSys can be easily programmed.</td>
+  </tr>
+  <tr>
+    <td class="tg-cent"><b>Functional</b></td>
+    <td class="tg-left" colspan="2">Both DTree and SSys allow to potentially take some decisions before having collected all factors.</td>
+  </tr>
+  <tr>
+    <td rowspan="2" class="tg-cent"><b>User perspective during Run</b></td>
+    <td class="tg-cent"><b>Local importance understanding</b>:<br>
+    Ability for a patient to understand his/her situation</td>
+    <td class="tg-left">+ Easier to follow a DTree path than computing a potentially large SSys sum.</td>
+    <td class="tg-left">+ SSys big sums may be challenging, but DTree can have non-trivial AND/OR conditions.<br><br>
+    + SSys allows to quickly identify how potential modification of some factors would change its score and potentially make the outcome tip over.<br>
+    See <i>Patient 1 story</i> below.
+  </tr>
+  <tr>
+    <td class="tg-cent"><b>Global importance understanding</b>:<br>
+    Ability for anyone to understand the main decision drivers of the whole algorithm</td>
+    <td class="tg-left">+ If DTree are well built, they offer a good understanding of the typical cases that drive the outcomes.<br>
+    See <i>Fever and cough importance discussion</i> below.
+    </td>
+    <td class="tg-left">+ SSys offer good insights of main factor importance, by comparing weights.<br>
+    See <i>Weights discussion</i> below.<br><br>
+    + DTree suffer from a interpretation bias: a factor near the tree leaves does not imply a factor with low importance.<br>
+    See <i>Top-vs-bottom node importance discussion</i> below.</td>
+  </tr>
+</table>
+<br>
+<p><em>Patient 1 story</em>:
+Let&rsquo;s assume the patient is a 55-year-old woman who has lost her sense of taste and smell (anosmia<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>).
+She has no risk factor, nor severity factor and no other symptom.
+Her Covid-19 orientation score is 7, 2 points away from crossing the tele-consultation threshold.
+She is able to rapidly conclude that if she gets an other listed symptom different from sore throat/muscle aches (which would add only 1 point), she should schedule a tele-consultation.
+This insight could be derived from the simplified decision tree but in a less straightforward manner.
+Scoring system is the winner here!</p>
+<p><em>Fever and cough importance discussion</em>:
+Patients with both fever and cough should have a tele-consultation!
+This fever/cough interaction is one core principle of the algorithm.
+Identify it from the simplified decision tree is straightforward.
+With the scoring system, the interaction is explicitly written (4 more points if fever and cough together), but concluding that it implies a tele-consultation requires some more steps.
+It is only by summing 3 terms (fever, cough and the interaction term) that one can make the conclusion.
+A victory for the decision tree!</p>
+<p><em>Weights discussion</em>:
+Looking at the scoring system weights gives a quick way to assess the importance of factors.
+The highest weights are +23, +8, +6 and +4.
+The major severity factor (+23) immediately stands out as implying the emergency outcome.
+Then risk (+8) and minor severity (+6) factors should be considered very important but treated together (as there weights cannot add up to +14).
+Finally, the fever and cough interaction term (+4) raises awareness on the fact that having both fever and cough leads to a total +9 points.
+As a conclusion, looking at scoring system highest weights is a quick method to reliably assess the important factors, at the core of the algorithm. This method has no simple equivalent for decision trees, as detailed in the next discussion.</p>
+<p><em>Top-vs-bottom node importance discussion</em>:
+In a decision tree, a natural factor order emerges from the tree structure: their &ldquo;relative altitude&rdquo;<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup>.
+Going further, one could think that there is a straightforward relationship between the &ldquo;relative importance&rdquo; of two factors and their &ldquo;relative altitude&rdquo;<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup> in the tree.
+Let us take an example from the Covid-19 tree and see what can be concluded.
+First, altitude does not allow to compare factors properly (fever being above and below cough at the same time).
+Moreover, there is no simple way to account for factors, like anosmia and sore throats, that are &ldquo;diluted&rdquo; in &ldquo;OR&rdquo; logical conditions.
+As a consequence, decision trees lack of a measure of importance of factor whereas scoring systems intrinsically bring their own.</p>
+<h2 id="key-messages">Key messages</h2>
+<p>I hope that this post has:</p>
+<ul>
+<li>enlightened your <strong>understanding of the French Covid-19 orientation algorithm</strong>.</li>
+<li>convinced you that <strong>decision trees have their strengths</strong>, notably being easier to build by experts.</li>
+<li>made you <strong>enthusiastic about point-based scoring systems</strong> and the measure of importance that their weights bring, both for <strong>local</strong> exploration around a particular user and for a <strong>global understanding</strong> of the algorithm.</li>
+<li>made you curious about how we could compute a <strong>rigorous importance measure</strong> (see my future post on Shapley Values).</li>
+<li>questioned you on how I <strong>obtained the weights</strong> of the scoring system (see my future post on ordinal regression).</li>
+<li>made you, algorithm builders and machine learning practitioners, think about how you could better pick <strong>rule-based vs additive explanation methods</strong> (more on this topic later).</li>
+</ul>
+<p><br><br><br></p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Translated from <a href="https://solidarites-sante.gouv.fr/soins-et-maladies/maladies/maladies-infectieuses/coronavirus/professionnels-de-sante/article/covid-19-et-telesante-qui-peut-pratiquer-a-distance-et-comment">French</a>: &ldquo;<em>The Department of Health encourages doctors and nurses to equip themselves with teleconsultation and telemonitoring solutions for the management of patients with Covid-19</em>.&rdquo; <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>This is not a negative feedback to the French official algorithm, whose documentation is I think well made and pretty clear. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p>Ustun, B. and Rudin, C., 2016. Supersparse linear integer models for optimized medical scoring systems. <em>Machine Learning</em>, 102(3), pp.349-391. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p>Lip, G.Y., Nieuwlaat, R., Pisters, R., Lane, D.A. and Crijns, H.J., 2010. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using a novel risk factor-based approach: the euro heart survey on atrial fibrillation. <em>Chest</em>, 137(2), pp.263-272. <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p>Two notable exceptions are mentioned. On the one hand, the Naive Bayes Classifier, that can still be seen as a GLM under additional assumptions. On the other hand, k-Nearest-Neighbors, which is not comparable because of its different nature: an instance-based learning model. <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>Linear Regression, Logistic Regression, Generalized Linear Models and Generalized Additive Models. <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p>Decision Tree, Decision Rules. <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p>RuleFit. <a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p>Technically, anosmia is the loss of the ability to detect one or more smells whereas dysgeusia is a distortion of the sense of taste. <a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p>By relative altitude, I mean that a factor can appear above (parent to child, grand-child), below (the reverse), or there can be no clear relationship. <a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+
+        
+
+        
+
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="/post/ex1/" data-toggle="tooltip" data-placement="top" title="Lorem Ipsum">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2020
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="/">data science ideas</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.68.3</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.js" integrity="sha384-K3vbOmF2BtaVai+Qk37uypf7VrgBubhQreNQe9aGsz9lB63dIFiQVlJbr92dw2Lx" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/contrib/auto-render.min.js" integrity="sha384-kmZOZB5ObwgQnS/DuDg6TScgOiWWBiVt0plIRkZCmE6rDZGrEOQeHM5PcHi+nyqe" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="/js/main.js"></script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
