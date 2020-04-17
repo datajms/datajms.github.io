@@ -6,7 +6,7 @@
     <description>Recent content on Data Science Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Apr 2020 16:51:53 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2020 16:51:53 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,15 +28,6 @@ Context and objectives of the blog post The Covid-19 outbreak in France challeng
       
       <guid>/post/ex1/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet nunc sed tellus blandit semper sed at nisl. Donec imperdiet diam eget ultricies fermentum. Aliquam id faucibus dui, in pharetra tortor. Vestibulum quam mi, rhoncus ac placerat sed, dignissim ut leo. Nulla imperdiet quam ut interdum efficitur. Curabitur malesuada mauris justo, id vehicula quam malesuada lobortis. Ut pharetra, orci congue varius scelerisque, est magna fermentum nisl, vel volutpat dolor est eget tortor.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>test about</description>
     </item>
     
   </channel>
