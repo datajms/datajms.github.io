@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on data science ideas</title>
+    <title>Tags on Data Science Ideas</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on data science ideas</description>
+    <description>Recent content in Tags on Data Science Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 09 Apr 2020 16:51:53 +0200</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>algorithm</title>
+      <link>/tags/algorithm/</link>
+      <pubDate>Thu, 09 Apr 2020 16:51:53 +0200</pubDate>
+      
+      <guid>/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Covid-19</title>
+      <link>/tags/covid-19/</link>
+      <pubDate>Thu, 09 Apr 2020 16:51:53 +0200</pubDate>
+      
+      <guid>/tags/covid-19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>XAI</title>
+      <link>/tags/xai/</link>
+      <pubDate>Thu, 09 Apr 2020 16:51:53 +0200</pubDate>
+      
+      <guid>/tags/xai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>draft</title>
+      <link>/tags/draft/</link>
+      <pubDate>Wed, 01 Apr 2020 16:51:53 +0200</pubDate>
+      
+      <guid>/tags/draft/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

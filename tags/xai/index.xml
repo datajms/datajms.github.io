@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Data Science Ideas</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on Data Science Ideas</description>
+    <title>XAI on Data Science Ideas</title>
+    <link>/tags/xai/</link>
+    <description>Recent content in XAI on Data Science Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 09 Apr 2020 16:51:53 +0200</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/xai/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,15 +19,6 @@
       <guid>/post/01_covid_scoring_system_presentation/</guid>
       <description>Were you aware that there is an official French decision tree to orient patients towards relevant medical services, depending on their Covid-19 related symptoms? I transformed it into a point-based scoring system (100% logically equivalent), so that a patient can compute his/her score by adding simple weights. Using these Covid-19 orientation algorithms, a more general comparative analysis is carried out concerning decision trees and scoring systems.
 Context and objectives of the blog post The Covid-19 outbreak in France challenges the French healthcare system ability to care and treat patients.</description>
-    </item>
-    
-    <item>
-      <title>Lorem Ipsum</title>
-      <link>/post/ex1/</link>
-      <pubDate>Wed, 01 Apr 2020 16:51:53 +0200</pubDate>
-      
-      <guid>/post/ex1/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet nunc sed tellus blandit semper sed at nisl. Donec imperdiet diam eget ultricies fermentum. Aliquam id faucibus dui, in pharetra tortor. Vestibulum quam mi, rhoncus ac placerat sed, dignissim ut leo. Nulla imperdiet quam ut interdum efficitur. Curabitur malesuada mauris justo, id vehicula quam malesuada lobortis. Ut pharetra, orci congue varius scelerisque, est magna fermentum nisl, vel volutpat dolor est eget tortor.</description>
     </item>
     
   </channel>

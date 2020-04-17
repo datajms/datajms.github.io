@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>data science ideas</title>
+    <title>Data Science Ideas</title>
     <link>/</link>
-    <description>Recent content on data science ideas</description>
+    <description>Recent content on Data Science Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 09 Apr 2020 16:51:53 +0200</lastBuildDate>
@@ -17,8 +17,8 @@
       <pubDate>Thu, 09 Apr 2020 16:51:53 +0200</pubDate>
       
       <guid>/post/01_covid_scoring_system_presentation/</guid>
-      <description>The ongoing Covid-19 outbreak has made it essential for authorities to manage how populations in need should contact either general practitioners or emergency medical services. In France, an official orientation algorithm has been released to give recommendations to patients, depending on their symptoms and medical history.
-After slightly simplifying this official decision tree, I present an original contribution: a Covid-19 orientation scoring system which is logically equivalent. Being the other type of decision-aid algorithm largely used in medicine, scoring systems offer a better understanding of the relative importance of the different factors.</description>
+      <description>Were you aware that there is an official French decision tree to orient patients towards relevant medical services, depending on their Covid-19 related symptoms? I transformed it into a point-based scoring system (100% logically equivalent), so that a patient can compute his/her score by adding simple weights. Using these Covid-19 orientation algorithms, a more general comparative analysis is carried out concerning decision trees and scoring systems.
+Context and objectives of the blog post The Covid-19 outbreak in France challenges the French healthcare system ability to care and treat patients.</description>
     </item>
     
     <item>
@@ -28,6 +28,15 @@ After slightly simplifying this official decision tree, I present an original co
       
       <guid>/post/ex1/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet nunc sed tellus blandit semper sed at nisl. Donec imperdiet diam eget ultricies fermentum. Aliquam id faucibus dui, in pharetra tortor. Vestibulum quam mi, rhoncus ac placerat sed, dignissim ut leo. Nulla imperdiet quam ut interdum efficitur. Curabitur malesuada mauris justo, id vehicula quam malesuada lobortis. Ut pharetra, orci congue varius scelerisque, est magna fermentum nisl, vel volutpat dolor est eget tortor.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>test about</description>
     </item>
     
   </channel>
