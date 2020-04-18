@@ -2373,7 +2373,6 @@ img {
 	main>aside {
 		margin-left: 1rem;
 		border-left-width: 4px;
-		border-color: #a3bffa
 	}
 	main>aside.tableOfContentContainer {
 		position: -webkit-sticky;
@@ -2383,7 +2382,8 @@ img {
 	}
 	main>aside>h3 {
 		font-size: 1rem;
-		color: #1a202c;
+		color: #333333;
+    opacity: 0.87;
 		font-weight: 700;
 		padding-bottom: .5rem;
 		padding-top: 1rem
@@ -2397,7 +2397,8 @@ img {
 		display: block;
 		padding-bottom: 1rem;
 		font-size: 1rem;
-		color: #1a202c
+		color: #333333;
+    opacity: 0.87;
 	}
 	#TableOfContents li {
 		padding-top: .25rem;
@@ -2411,19 +2412,16 @@ img {
 	}
 
 	#TableOfContents li.active>a {
-		color: #333;
+		color: #333333;
+    opacity: 0.87;
 		font-weight: 500
 	}
 	#TableOfContents a {
 		text-decoration: none;
 		padding: 0 0;
-		color: #a0aec0;
+		color: #aaaaaa;
 		-webkit-transition: all 50ms ease-in-out;
 		transition: all 50ms ease-in-out
 	}
-	#TableOfContents a:hover,
-	#TableOfContents a:focus,
-	#TableOfContents a:active {
-		color: #666
-	}
+
 }
