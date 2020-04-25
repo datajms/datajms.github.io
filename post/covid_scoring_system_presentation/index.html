@@ -24,7 +24,7 @@
         "datePublished": "2020-04-17 08:51:53 \x2b0200 CEST",
         "dateModified" : "2020-04-17 08:51:53 \x2b0200 CEST",
         "url" : "\/post\/covid_scoring_system_presentation\/",
-        "wordCount" : "2205",
+        "wordCount" : "2268",
         "keywords" : [ "Covid-19","algorithm","XAI","Blog" ]
     }
     </script>
@@ -83,7 +83,7 @@
 <meta itemprop="description" content="From a decision tree to a point-based scoring system">
 <meta itemprop="datePublished" content="2020-04-17T08:51:53&#43;02:00" />
 <meta itemprop="dateModified" content="2020-04-17T08:51:53&#43;02:00" />
-<meta itemprop="wordCount" content="2205">
+<meta itemprop="wordCount" content="2268">
 
 
 
@@ -415,15 +415,14 @@ As presented in the next section, an <strong>orientation algorithm</strong> has 
 The simplified decision tree is then transformed into a <strong>point-based scoring system</strong>, the other type of decision-aid algorithm largely used in medicine.
 Finally, I will illustrate <strong>pros and cons</strong> of both algorithm types, with examples drawn from Covid-19 orientation problem.</p>
 <h2 id="the-official-patient-questionnaire-and-decision-tree">The official patient questionnaire and decision tree</h2>
-<p>The <a href="https://www.pasteur.fr/en">Institut Pasteur</a> (a private non-profit research foundation on diseases) and <a href="https://www.aphp.fr/">AP-HP</a> (a world-renowned university hospital trust, composed by 39 hospitals) released an official tool to help patient orientation to relevant medical services:</p>
+<p>A taskforce named <a href="https://www.pasteur.fr/fr/journal-recherche/actualites/projet-covid-tele">COVID-TELE</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, supported by the <a href="https://solidarites-sante.gouv.fr/soins-et-maladies/maladies/maladies-infectieuses/coronavirus/tout-savoir-sur-le-covid-19/">French Ministry of Health and Solidarity</a>, and co-sponsored by both <a href="https://www.aphp.fr/">AP-HP</a><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> and <a href="https://www.pasteur.fr/en">Institut Pasteur</a><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>, released guidelines to help patient orientation to relevant medical services:</p>
 <ul>
 <li>a 22-item questionnaire for patients</li>
 <li>an decision tree algorithm to process questionnaire answers into recommendations</li>
 <li>an exact wording for the patient recommendations.</li>
 </ul>
-<p>The main implementation can be found <a href="https://maladiecoronavirus.fr/">here</a>, where French-speaking Internet users can have their personal recommendations.
-It has been promoted by the official Department of Health <a href="https://solidarites-sante.gouv.fr/soins-et-maladies/maladies/maladies-infectieuses/coronavirus/tout-savoir-sur-le-covid-19/">Covid-19 portal</a>, under the heading &ldquo;<em>Do I have the coronavirus?</em> &ldquo;.
-All documentation is in French on a <a href="https://delegation-numerique-en-sante.github.io/covid19-algorithme-orientation/">dedicated website</a> (more details <a href="https://github.com/Delegation-numerique-en-sante/covid19-algorithme-orientation">here</a> for the most curious among you).</p>
+<p>Several implementations can be found, either developed by the <a href="https://www.gouvernement.fr/info-coronavirus/orientation-medicale">French government</a> or by <a href="https://maladiecoronavirus.fr/">private foundations</a>, where French-speaking Internet users can have their personal recommendations.
+All documentation is in French on a <a href="https://delegation-numerique-en-sante.github.io/covid19-algorithme-orientation/">dedicated website</a> (more details on this <a href="https://github.com/Delegation-numerique-en-sante/covid19-algorithme-orientation">github repo</a> for the most curious among you).</p>
 <p>On the last available version (30th of March 2020 version) when writing this article, there are the three types of questions: <strong>symptoms</strong> (fever, cough, diarrhea, anosmia, sore throat or muscle aches), <strong>risk factors</strong> (age, body mass index, pregnancy status, chronic conditions and current medication) and <strong>severity factors</strong> (major or minor one).</p>
 <p>Answering these questions lead to eight possible official patient recommendations.
 However, some of these recommendations are very similar and can be grouped.
@@ -457,10 +456,10 @@ I will present an equivalent point-based scoring system which gives the same rec
 The motivation for a scoring system is its ability to quickly capture the most important factors of an algorithm (see final section for more details).</p>
 <h2 id="an-equivalent-point-based-scoring-system">An equivalent point-based scoring system</h2>
 <p>What is a scoring system?
-Scoring system means that a decision variable (the score) is built by adding, subtracting or multiplying a few meaningful numbers<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.
+Scoring system means that a decision variable (the score) is built by adding, subtracting or multiplying a few meaningful numbers<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.
 Point-based insists on the fact that <em>i.</em> the score involves integer numbers and <em>ii.</em> thresholds are used to make decisions from the score.</p>
 <p>Point-based scoring system are largely used in medical applications.
-For example, CHA<sub>2</sub>DS<sub>2</sub>VASc<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> is used on a daily basis in cardiology departments as a decision-aid tool to assess the risk of stroke (CVA) in the event of atrial fibrillation and to guide the prescription or non-prescription of anticoagulants. (see demo <a href="https://www.mdcalc.com/cha2ds2-vasc-score-atrial-fibrillation-stroke-risk">here</a>).
+For example, CHA<sub>2</sub>DS<sub>2</sub>VASc<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> is used on a daily basis in cardiology departments as a decision-aid tool to assess the risk of stroke (CVA) in the event of atrial fibrillation and to guide the prescription or non-prescription of anticoagulants. (see demo <a href="https://www.mdcalc.com/cha2ds2-vasc-score-atrial-fibrillation-stroke-risk">here</a>).
 It is a sum of 8 contributions (0pt, 1pt or 2pts) with indicative thresholds to separate low, medium and high risk patients.</p>
 <p>Going back to the Covid-19 patient orientation problem, here is a proposal of a point-based scoring system, equivalent with the simplified decision tree:
 <a name="01_orientation_score"></a>
@@ -474,9 +473,9 @@ Presence of cough adds another +2pts and anosmia increase the final score by +1p
 Then, the 9pt-score patient deduces its recommended action (schedule a tele-consultation).</p>
 <h2 id="decision-tree-vs-scoring-system-a-comparative-analysis">Decision tree vs Scoring system: a comparative analysis</h2>
 <p>Both algorithms are largely used.
-For example, Lip et al. presented both a scoring system and a clinical flowchart (an action-oriented decision tree) in their <a href="https://cardiopapers.com.br/wp-content/uploads/2011/01/chest.pdf">2010 paper</a><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> (Table 2 and Figure 1) introducing CHA<sub>2</sub>DS<sub>2</sub>VASc.
+For example, Lip et al. presented both a scoring system and a clinical flowchart (an action-oriented decision tree) in their <a href="https://cardiopapers.com.br/wp-content/uploads/2011/01/chest.pdf">2010 paper</a><sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> (Table 2 and Figure 1) introducing CHA<sub>2</sub>DS<sub>2</sub>VASc.
 Applied to machine learning, both trees and scoring systems are the building blocks of hardly any interpretable predictive model.
-In his 2019 interpretable machine learning <a href="https://christophm.github.io/interpretable-ml-book/">book</a>, Molnar common presents interpretable models, which almost<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> all fall into the scoring system family<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>, tree family<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> (similar to rule-based models) or both<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>.</p>
+In his 2019 interpretable machine learning <a href="https://christophm.github.io/interpretable-ml-book/">book</a>, Molnar common presents interpretable models, which almost all fall into the scoring system family, tree family (similar to rule-based models) or both<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>.</p>
 <p>The table below presents a comparative analysis of decision trees and scoring systems, which exposes arguments concerning their strengths and weaknesses.
 The comparative analysis addresses the different phases of an algorithm life: <strong>Build</strong>, <strong>Implementation</strong> and the <strong>User perspective during the &ldquo;Run&rdquo;</strong>.
 The latter refers to the patient&rsquo;s ability to understand his/her situation (Local importance understanding) and to understand the main decision drivers of the whole algorithm (Global importance understanding).</p>
@@ -608,22 +607,22 @@ As a consequence, decision trees lack of a measure of importance of factor where
 <p>Translated from <a href="https://solidarites-sante.gouv.fr/soins-et-maladies/maladies/maladies-infectieuses/coronavirus/professionnels-de-sante/article/covid-19-et-telesante-qui-peut-pratiquer-a-distance-et-comment">French</a>: &ldquo;<em>The Department of Health encourages doctors and nurses to equip themselves with teleconsultation and telemonitoring solutions for the management of patients with Covid-19</em>.&rdquo; <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:2" role="doc-endnote">
-<p>Ustun, B. and Rudin, C., 2016. Supersparse linear integer models for optimized medical scoring systems. <em>Machine Learning</em>, 102(3), pp.349-391. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>The mission of the COVID-TELE taskforce is to collect all pseudonymized questionnaire answers in order to carry out real-time epidemiological surveillance, identify the most relevant symptoms and potential risk factors for treatment failure and improve patient care pathways. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:3" role="doc-endnote">
-<p>Lip, G.Y., Nieuwlaat, R., Pisters, R., Lane, D.A. and Crijns, H.J., 2010. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using a novel risk factor-based approach: the euro heart survey on atrial fibrillation. <em>Chest</em>, 137(2), pp.263-272. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>AP-HP is a world-renowned university hospital trust, composed by 39 hospitals. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:4" role="doc-endnote">
-<p>Two notable exceptions are mentioned. On the one hand, the Naive Bayes Classifier, that can still be seen as a GLM under additional assumptions. On the other hand, k-Nearest-Neighbors, which is not comparable because of its different nature: an instance-based learning model. <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Institut Pasteur is a private non-profit research foundation on diseases. <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:5" role="doc-endnote">
-<p>Linear Regression, Logistic Regression, Generalized Linear Models and Generalized Additive Models. <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Ustun, B. and Rudin, C., 2016. Supersparse linear integer models for optimized medical scoring systems. <em>Machine Learning</em>, 102(3), pp.349-391. <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:6" role="doc-endnote">
-<p>Decision Tree, Decision Rules. <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>Lip, G.Y., Nieuwlaat, R., Pisters, R., Lane, D.A. and Crijns, H.J., 2010. Refining clinical risk stratification for predicting stroke and thromboembolism in atrial fibrillation using a novel risk factor-based approach: the euro heart survey on atrial fibrillation. <em>Chest</em>, 137(2), pp.263-272. <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:7" role="doc-endnote">
-<p>RuleFit. <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<p>All interpretable models mentioned by Molnar falls into scoring system family (Linear Regression, Logistic Regression, Generalized Linear Models and Generalized Additive Models), tree family (Decision Tree, Decision Rules) or both (RuleFit). Only two notable exceptions are mentioned. On the one hand, the Naive Bayes Classifier, that can still be seen as a GLM under additional assumptions. On the other hand, k-Nearest-Neighbors, which is not comparable because of its different nature: an instance-based learning model. <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 <li id="fn:8" role="doc-endnote">
 <p>Technically, anosmia is the loss of the ability to detect one or more smells whereas dysgeusia is a distortion of the sense of taste. <a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
