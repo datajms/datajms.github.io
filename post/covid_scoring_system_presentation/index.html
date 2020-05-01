@@ -24,7 +24,7 @@
         "datePublished": "2020-04-17 08:51:53 \x2b0200 CEST",
         "dateModified" : "2020-04-17 08:51:53 \x2b0200 CEST",
         "url" : "\/post\/covid_scoring_system_presentation\/",
-        "wordCount" : "2291",
+        "wordCount" : "2303",
         "keywords" : [ "Covid-19","algorithm","XAI","Blog" ]
     }
     </script>
@@ -83,7 +83,7 @@
 <meta itemprop="description" content="From a decision tree to a point-based scoring system">
 <meta itemprop="datePublished" content="2020-04-17T08:51:53&#43;02:00" />
 <meta itemprop="dateModified" content="2020-04-17T08:51:53&#43;02:00" />
-<meta itemprop="wordCount" content="2291">
+<meta itemprop="wordCount" content="2303">
 
 
 
@@ -409,6 +409,8 @@ if (!doNotTrack) {
             <p>Were you aware that there is an <strong>official French decision tree</strong> to orient patients towards relevant medical services, depending on their Covid-19 related symptoms?
 I transformed it into a <a href="/post/covid_scoring_system_presentation/#01_orientation_score"><strong>point-based scoring system</strong></a> (100% logically equivalent), so that a patient can compute his/her score by adding simple weights.
 Using these Covid-19 orientation algorithms, a more general <strong>comparative analysis</strong> is carried out concerning decision trees and scoring systems.</p>
+<p>If you are in a hurry, <a href="#take_away_message">go and see the take-away messages</a>!</p>
+<br>
 <h2 id="context-and-objectives">Context and objectives</h2>
 <p>The Covid-19 outbreak in France challenges the French healthcare system ability to care and treat patients.
 In this context, an efficient orientation of potential patients is a pre-requisite to improve <strong>reactivity and good use of scarce resources</strong>: medical emergency telephone lines and medical emergency vehicles.</p>
@@ -417,6 +419,8 @@ As presented in the next section, an <strong>orientation algorithm</strong> has 
 <p>I will present additional context to the <strong>official orientation algorithm</strong> and then a slightly <strong>simplified version</strong> of the official decision tree.
 The simplified decision tree is then transformed into a <strong>point-based scoring system</strong>, the other type of decision-aid algorithm largely used in medicine.
 Finally, I will illustrate <strong>pros and cons</strong> of both algorithm types, with examples drawn from Covid-19 orientation problem.</p>
+<br>
+<p><a name="official_patient_questionnaire"></a></p>
 <h2 id="the-official-patient-questionnaire-and-decision-tree">The official patient questionnaire and decision tree</h2>
 <p>A taskforce named <a href="https://www.pasteur.fr/fr/journal-recherche/actualites/projet-covid-tele">COVID-TELE</a><sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, supported by the <a href="https://solidarites-sante.gouv.fr/soins-et-maladies/maladies/maladies-infectieuses/coronavirus/tout-savoir-sur-le-covid-19/">French Ministry of Health and Solidarity</a>, and co-sponsored by both <a href="https://www.aphp.fr/">AP-HP</a><sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> and <a href="https://www.pasteur.fr/en">Institut Pasteur</a><sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>, released guidelines to help patient orientation to relevant medical services:</p>
 <ul>
@@ -430,6 +434,7 @@ All documentation is in French on a <a href="https://delegation-numerique-en-san
 <p>Answering these questions lead to eight possible official patient recommendations.
 However, some of these recommendations are very similar and can be grouped.
 In the next section, I present a possible simplification of the orientation decision tree.</p>
+<br>
 <h2 id="a-simplified-patient-orientation-decision-tree">A simplified patient orientation decision tree</h2>
 <p>From the official decision tree, 2 simplifications are made:</p>
 <ol>
@@ -457,6 +462,7 @@ No loss of information though, as one can add a note that explains that the new 
 <p>Hereafter, I take the simplified decision tree as a reference.
 I will present an equivalent point-based scoring system which gives the same recommendation as the simplified decision tree for every possible case.
 The motivation for a scoring system is its ability to quickly capture the most important factors of an algorithm (see final section for more details).</p>
+<br>
 <h2 id="an-equivalent-point-based-scoring-system">An equivalent point-based scoring system</h2>
 <p>What is a scoring system?
 Scoring system means that a decision variable (the score) is built by adding, subtracting or multiplying a few meaningful numbers<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>.
@@ -474,6 +480,7 @@ It is a sum of 8 contributions (0pt, 1pt or 2pts) with indicative thresholds to 
 In the right column of the figure above, age (53y), risk factors (0) and minor severity factors (0) results in +6pts.
 Presence of cough adds another +2pts and anosmia increase the final score by +1pt.
 Then, the 9pt-score patient deduces its recommended action (schedule a tele-consultation).</p>
+<br>
 <h2 id="decision-tree-vs-scoring-system-a-comparative-analysis">Decision tree vs Scoring system: a comparative analysis</h2>
 <p>Both algorithms are largely used.
 For example, Lip et al. presented both a scoring system and a clinical flowchart (an action-oriented decision tree) in their <a href="https://cardiopapers.com.br/wp-content/uploads/2011/01/chest.pdf">2010 paper</a><sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> (Table 2 and Figure 1) introducing CHA<sub>2</sub>DS<sub>2</sub>VASc.
@@ -561,6 +568,7 @@ table.tg>tbody>tr>:nth-child(odd), table.tg>tbody>tr>:nth-child(even){
 </table>
 </div>
 <br>
+<br>
 <h2 id="the-comparative-analysis-illustrated-by-covid-19-orientation-examples">The comparative analysis, illustrated by Covid-19 orientation examples</h2>
 <p>Four general arguments of the comparative analysis are illustrated with the Covid-19 orientation algorithms.</p>
 <p><em>Discussion <strong>A</strong>: a patient story</em><br>
@@ -591,6 +599,8 @@ First, altitude does not allow to compare factors properly (fever being above an
 Moreover, there is no simple way to account for factors, like anosmia and sore throats, that are &ldquo;diluted&rdquo; in &ldquo;OR&rdquo; logical conditions.
 Finally, factors appearing near the top (major severity factor) or near the bottom (risk factor) can be both be important.
 As a consequence, decision trees lack of a measure of importance of factor whereas scoring systems intrinsically bring their own (weights).</p>
+<br>
+<p><a name="take_away_message"></a></p>
 <h2 id="take-away-messages">Take-away messages</h2>
 <p>I hope that this post has:</p>
 <ul>
