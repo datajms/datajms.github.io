@@ -281,7 +281,7 @@ if (!doNotTrack) {
         
 
         <a href="/post/covid_variable_importance_shapley/" class="image featured">
-            <img src="/img/post/covid_importance_variables//thumbnail.png" alt="">
+            <img src="/img/post/covid_variable_importance_shapley//thumbnail.png" alt="">
         </a>
     
 
@@ -505,7 +505,7 @@ On a young population, we expect age to predominate ; while with grown-up adults
 </ul>
 <br>
 <figure>
-  <img src=/img/post/covid_importance_variables/weighting_magnifying.png >
+  <img src=/img/post/covid_variable_importance_shapley/weighting_magnifying.png >
 </figure>
 
 <br>
@@ -644,7 +644,7 @@ Sobol index was relatively fast (~20 min with a single process) whereas the othe
 <p>Each importance type has been normalized (rescaled to sum up to 100%) in the following figures.
 Colors show the 3 importance types explained before and <em>Average Importance</em> the average of the 3.
 <figure>
-  <img src=/img/post/covid_importance_variables/results_importance.png >
+  <img src=/img/post/covid_variable_importance_shapley/results_importance.png >
 </figure>
 </p>
 <h3 id="the-3-methods">The 3 methods</h3>
@@ -681,7 +681,7 @@ Moving from scenario A to B, number of <strong>minor severity factors</strong> a
 Therefore and using the <a href="#factor_distribution_importance">concepts introduced before</a>, switching from A to B <strong>doesn&rsquo;t change the variable weighting</strong> (except relatively, for <em>age</em>) but <strong>increases a lot the interactions magnifying</strong> (for 2-term interactions: 0.25 vs 0.04 probability; for 3-term interactions: 0.125 vs 0.008 probability, etc.).<br>
 Basically, <strong>scenario B puts more weight on interactions between factors</strong> and increases importances which rely on strong interactions (the more terms, the more relative weight is added).</p>
 <figure>
-  <img src=/img/post/covid_importance_variables/simplified_decision_tree.png >
+  <img src=/img/post/covid_variable_importance_shapley/simplified_decision_tree.png >
 </figure>
 
 <p>With this perspective:</p>
