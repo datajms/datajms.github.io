@@ -6,10 +6,21 @@
     <description>Recent content in XAI on Data Science Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Apr 2020 08:51:53 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 15:15:56 +0200</lastBuildDate>
     
 	<atom:link href="/tags/xai/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Breaking down factors of Covid-19 orientation algorithm by importance</title>
+      <link>/post/covid_variable_importance_shapley/</link>
+      <pubDate>Fri, 01 May 2020 15:15:56 +0200</pubDate>
+      
+      <guid>/post/covid_variable_importance_shapley/</guid>
+      <description>Let&amp;rsquo;s dig deeper on the important factors of the French Covid-19 patient orientation algorithm! The short answer is fever, diarrhea and number of risk factors, but the real answer is that your target population matters a lot.
+Follow me on this journey with 3 variable importance methods and get some insights about how factors interact.
+If you are in a hurry, go and see the take-away messages or have a look at the python code.</description>
+    </item>
     
     <item>
       <title>Simplifying the French Covid-19 patient orientation algorithm</title>

@@ -6,10 +6,37 @@
     <description>Recent content in Tags on Data Science Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 17 Apr 2020 08:51:53 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 15:15:56 +0200</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Covid-19</title>
+      <link>/tags/covid-19/</link>
+      <pubDate>Fri, 01 May 2020 15:15:56 +0200</pubDate>
+      
+      <guid>/tags/covid-19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>with code</title>
+      <link>/tags/with-code/</link>
+      <pubDate>Fri, 01 May 2020 15:15:56 +0200</pubDate>
+      
+      <guid>/tags/with-code/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>XAI</title>
+      <link>/tags/xai/</link>
+      <pubDate>Fri, 01 May 2020 15:15:56 +0200</pubDate>
+      
+      <guid>/tags/xai/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>algorithm</title>
@@ -17,24 +44,6 @@
       <pubDate>Fri, 17 Apr 2020 08:51:53 +0200</pubDate>
       
       <guid>/tags/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Covid-19</title>
-      <link>/tags/covid-19/</link>
-      <pubDate>Fri, 17 Apr 2020 08:51:53 +0200</pubDate>
-      
-      <guid>/tags/covid-19/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>XAI</title>
-      <link>/tags/xai/</link>
-      <pubDate>Fri, 17 Apr 2020 08:51:53 +0200</pubDate>
-      
-      <guid>/tags/xai/</guid>
       <description></description>
     </item>
     

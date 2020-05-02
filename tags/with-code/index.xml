@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Data Science Ideas</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on Data Science Ideas</description>
+    <title>with code on Data Science Ideas</title>
+    <link>/tags/with-code/</link>
+    <description>Recent content in with code on Data Science Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 May 2020 15:15:56 +0200</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/with-code/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
       <description>Let&amp;rsquo;s dig deeper on the important factors of the French Covid-19 patient orientation algorithm! The short answer is fever, diarrhea and number of risk factors, but the real answer is that your target population matters a lot.
 Follow me on this journey with 3 variable importance methods and get some insights about how factors interact.
 If you are in a hurry, go and see the take-away messages or have a look at the python code.</description>
-    </item>
-    
-    <item>
-      <title>Simplifying the French Covid-19 patient orientation algorithm</title>
-      <link>/post/covid_scoring_system_presentation/</link>
-      <pubDate>Fri, 17 Apr 2020 08:51:53 +0200</pubDate>
-      
-      <guid>/post/covid_scoring_system_presentation/</guid>
-      <description>Were you aware that there is an official French decision tree to orient patients towards relevant medical services, depending on their Covid-19 related symptoms? I transformed it into a point-based scoring system (100% logically equivalent), so that a patient can compute his/her score by adding simple weights. Using these Covid-19 orientation algorithms, a more general comparative analysis is carried out concerning decision trees and scoring systems.
-If you are in a hurry, go and see the take-away messages!</description>
     </item>
     
   </channel>
