@@ -1,0 +1,858 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <script type="application/ld+json">
+    {
+        "@context" : "http://schema.org",
+        "@type" : "BlogPosting",
+        "mainEntityOfPage": {
+             "@type": "WebPage",
+             "@id": "\/"
+        },
+        "articleSection" : "post",
+        "name" : "Do you know the 4 types of additive Variable Importances?",
+        "headline" : "Do you know the 4 types of additive Variable Importances?",
+        "description" : "From Sobol indices to SAGE values: different purposes, same optimality",
+        "inLanguage" : "en",
+        "author" : "",
+        "creator" : "",
+        "publisher": "",
+        "accountablePerson" : "",
+        "copyrightHolder" : "",
+        "copyrightYear" : "2020",
+        "datePublished": "2020-05-16 15:36:11 \x2b0200 CEST",
+        "dateModified" : "2020-05-16 15:36:11 \x2b0200 CEST",
+        "url" : "\/post\/variable_importance_feature_attribution\/",
+        "wordCount" : "2553",
+        "keywords" : [ "ideas","feature importance","XAI","some math","Blog" ]
+    }
+    </script>
+        
+            
+                <title>Do you know the 4 types of additive Variable Importances?</title>
+            
+        
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="generator" content="Hugo 0.68.3" />
+        
+  
+    
+    
+  
+
+  
+
+  <link rel="apple-touch-icon-precomposed" href='/favicon/apple-touch-icon-precomposed-32x32.png'>
+  <link rel="icon" href='/favicon/favicon-32x32.png'>
+  
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content='/favicon/mstile-32x32.png'>
+  <meta name="application-name" content="Data Science Ideas">
+  <meta name="msapplication-tooltip" content="Data Science Ideas: For an effective use of data">
+  <meta name="msapplication-config" content='/favicon/ieconfig.xml'>
+
+
+
+        
+            <meta name="author" content="Jean-Matthieu Schertzer">
+        
+        
+            <meta name="description" content="From Sobol indices to SAGE values: different purposes, same optimality">
+        
+
+        <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Do you know the 4 types of additive Variable Importances?"/>
+<meta name="twitter:description" content="From Sobol indices to SAGE values: different purposes, same optimality"/>
+<meta name="twitter:site" content="@datajms"/>
+
+        <meta property="og:title" content="Do you know the 4 types of additive Variable Importances?" />
+<meta property="og:description" content="From Sobol indices to SAGE values: different purposes, same optimality" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/variable_importance_feature_attribution/" />
+<meta property="article:published_time" content="2020-05-16T15:36:11+02:00" />
+<meta property="article:modified_time" content="2020-05-16T15:36:11+02:00" />
+
+        <meta property="og:image" content="https://datajms.com/img/post/variable_importance_feature_attribution/thumbnail.png">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:width" content="512">
+        <meta property="og:image:height" content="512">
+        <meta itemprop="name" content="Do you know the 4 types of additive Variable Importances?">
+<meta itemprop="description" content="From Sobol indices to SAGE values: different purposes, same optimality">
+<meta itemprop="datePublished" content="2020-05-16T15:36:11&#43;02:00" />
+<meta itemprop="dateModified" content="2020-05-16T15:36:11&#43;02:00" />
+<meta itemprop="wordCount" content="2553">
+
+
+
+<meta itemprop="keywords" content="ideas,feature importance,XAI,some math," />
+        
+
+        
+            
+        
+
+        
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.css">
+            <link rel="stylesheet" href="/css/main.css">
+            <link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="/css/academicons.min.css">
+            <link rel="stylesheet" href="/css/fonts.css">
+        
+
+        
+
+
+  
+    
+
+
+
+      
+        
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	if (window.sessionStorage) {
+		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
+		ga('create', 'UA-162779469-1', {
+	    'storage': 'none',
+	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
+	   });
+	   ga(function(tracker) {
+	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
+	   });
+   }
+	
+	ga('send', 'pageview');
+}
+</script>
+
+      
+    </head>
+    <body>
+
+      
+      <div id="wrapper">
+
+    
+    
+<header id="header">
+    
+      <h1><a href="/">Data Science Ideas</a></h1>
+    
+
+    <nav class="links">
+        <ul>
+            
+                <li>
+                    <a href="/">
+                            <i class="fa fa-home">&nbsp;</i>Home
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/post/">
+                            <i class="fa fa-newspaper-o">&nbsp;</i>Posts
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="/about/">
+                            <i class="fa fa-id-card-o">&nbsp;</i>About
+                    </a>
+                </li>
+            
+        </ul>
+    </nav>
+    <nav class="main">
+        <ul>
+            
+            <li id="share-nav" class="share-menu" style="display:none;">
+                <a class="fa-share-alt" href="#share-menu">Share</a>
+            </li>
+            
+            <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="//google.com/search">
+                    <input type="text" name="q" placeholder="Search" />
+                    <input type="hidden" name="as_sitesearch" value="datajms.com">
+                </form>
+            </li>
+            <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="menu">
+
+    
+        <section>
+            <form class="search" method="get" action="//google.com/search">
+                <input type="text" name="q" placeholder="Search" />
+                <input type="hidden" name="as_sitesearch" value="datajms.com">
+            </form>
+        </section>
+
+    
+        <section>
+            <ul class="links">
+                
+                    <li>
+                        <a href="/">
+                            <h3>
+                                <i class="fa fa-home">&nbsp;</i>Home
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/post/">
+                            <h3>
+                                <i class="fa fa-newspaper-o">&nbsp;</i>Posts
+                            </h3>
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a href="/about/">
+                            <h3>
+                                <i class="fa fa-id-card-o">&nbsp;</i>About
+                            </h3>
+                        </a>
+                    </li>
+                
+            </ul>
+        </section>
+
+    
+        <section class="recent-posts">
+            <div class="mini-posts">
+                <header>
+                    <h3>Recent Posts</h3>
+                </header>
+                
+
+                
+                    
+                
+
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/variable_importance_feature_attribution/">Do you know the 4 types of additive Variable Importances?</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-16'>
+                                    May 16, 2020</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/post/variable_importance_feature_attribution/" class="image featured">
+            <img src="/img/post/variable_importance_feature_attribution//thumbnail.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/">Posts</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-16'>
+                                    May 16, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/covid_variable_importances_shapley/">Breaking down factors of Covid-19 orientation algorithm by importance</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-01'>
+                                    May 1, 2020</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/post/covid_variable_importances_shapley/" class="image featured">
+            <img src="/img/post/covid_variable_importances_shapley//thumbnail.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+
+                
+                    <a href=
+                        
+                            /post/
+                        
+                        class="button">View more posts</a>
+                
+            </div>
+        </section>
+
+    
+        
+</section>
+
+    <section id="share-menu">
+    <section id="social-share-nav">
+        <ul class="links">
+            <header>
+                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
+            </header>
+            
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3A//datajms.com%2fpost%2fvariable_importance_feature_attribution%2f&amp;via=datajms&amp;text=Do%20you%20know%20the%204%20types%20of%20additive%20Variable%20Importances%3f" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3A//datajms.com%2fpost%2fvariable_importance_feature_attribution%2f&amp;title=Do%20you%20know%20the%204%20types%20of%20additive%20Variable%20Importances%3f" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+        </ul>
+    </section>
+</section>
+
+    
+    <div id="main">
+        
+        
+        <article class="post">
+  <header>
+    <div class="title">
+        
+            <h1><a href="/post/variable_importance_feature_attribution/">Do you know the 4 types of additive Variable Importances?</a></h1>
+            
+        
+        
+            <p>From Sobol indices to SAGE values: different purposes, same optimality</p>
+        
+    </div>
+    <div class="meta">
+        
+
+        <time class="published"
+            datetime='2020-05-16'>
+            May 16, 2020</time>
+        <span class="author">Jean-Matthieu Schertzer</span>
+        
+            <p>12 minute read</p>
+        
+        
+    </div>
+</header>
+
+
+  
+    <section id="social-share">
+      <ul class="icons">
+        
+
+
+
+<li>
+  <a href="//twitter.com/share?url=https%3A//datajms.com%2fpost%2fvariable_importance_feature_attribution%2f&amp;via=datajms&amp;text=Do%20you%20know%20the%204%20types%20of%20additive%20Variable%20Importances%3f" target="_blank" class="share-btn twitter">
+    <i class="fa fa-twitter"></i>
+    <p>Twitter</p>
+    </a>
+</li>
+
+
+
+
+<li>
+  <a href="//www.linkedin.com/shareArticle?url=https%3A//datajms.com%2fpost%2fvariable_importance_feature_attribution%2f&amp;title=Do%20you%20know%20the%204%20types%20of%20additive%20Variable%20Importances%3f" target="_blank" class="share-btn linkedin">
+      <i class="fa fa-linkedin"></i>
+      <p>LinkedIn</p>
+    </a>
+</li>
+
+
+      </ul>
+    </section>
+  
+
+  
+  
+
+    
+    <main>
+        <div class="mycontent" id="mycontent">
+            <p>Facing complex models, both computer simulation and machine learning practitioners have pursued similar objectives: to see how results could be broken down and linked to the inputs.
+Whether it is called <strong>Sensitivity Analysis</strong> or <strong>Variable Importance</strong> in the context of explainable AI, some of their methods share an important component: the <strong>Shapley values</strong>.</p>
+<p>This article presents a structured 2 by 2 matrix to think about Variable Importances in terms of their goals.
+Focused on additive feature attribution methods, the 4 identified quadrants are presented along with their &ldquo;optimal&rdquo; method: SHAP, SHAPLEY EFFECTS, SHAPloss and the very recent SAGE.
+Then, we will look into Shapley values and their properties, which make the 4 methods theoretically optimal.
+Finally, I will share my thoughts on the perspectives concerning Variable Importance methods.</p>
+<p>If you are in a hurry, go and see the <a href="#simplified_matrix">simplified 4 quadrants</a> and then the <a href="#take_away_message">take-away messages</a>.
+If you have never heard of Variable Importance or the shap method, I advise you to read this <a href="/post/covid_variable_importances_shapley/">article</a> first.</p>
+<br>
+<h2 id="which-purpose-for-variable-importance-">Which purpose for Variable Importance ?</h2>
+<p>So, what properties should Variable Importances have?
+Although there are other possible choices, we will focus on Variable Importances with the 2 following requirements:</p>
+<ul>
+<li><strong>Feature attribution</strong>: Indicating how much a <strong>quantity of interest</strong> of our model \(f\) rely on each feature.</li>
+<li><strong>Additive importance</strong>: Summing the importances should lead to a <em>quantity that makes sense</em> (typically the quantity of interest of model \(f\)).</li>
+</ul>
+<p>While <em>Feature attribution</em> property is the essence of Variable Importance, the <em>Additive importance</em> requirement is more challenging.
+More well known Variable Importance methods break it: the Breiman Random Forest variable importance, Feature ablation, Permutation importance, etc.
+Let&rsquo;s focus on Variable Importances with these 2 properties.</p>
+<br>
+<h3 id="set-your-goal">Set your goal&hellip;</h3>
+<p>Let&rsquo;s focus on an important concept: the <strong>Quantity of interest</strong>.
+The <strong>quantity of interest</strong> is the metric that you want to &ldquo;split&rdquo; as a sum over the variables.
+If you find this definition too vague, you will like the Shapley value part <a href="#take_away_message">below</a>.</p>
+<p>Choosing the <strong>quantity of interest</strong> is the next step and should match your goal.
+There are multiple choices, corresponding to different perspectives:</p>
+<ul>
+<li><strong>Local vs global</strong> scope: should Variable Importances sum for each row of the dataset, or at population scale?
+<strong>Local scope</strong> is suitable when a focus on one data point is relevant or when the importance should be analyzed along 1 dimension. Whereas <strong>global scope</strong> is relevant for a summary metric used for high-level decisions: variable selection, factor prioritization, etc.</li>
+<li><strong>Sensitivity vs Predictive power</strong> metric: should Variable Importances be a measure of how model \(f\) varies, or how predictive performance increases with it?
+From a <strong>sensitivity</strong> perspective, importance should focus on how the computation with \(f\) rely on a variable. Whereas the <strong>predictive power</strong> approach sets importances to account for how much a variable contributes to improve the predictive performance (reduce the loss function).</li>
+</ul>
+<br>
+<h3 id="-by-choosing-a-quadrant">&hellip; by choosing a quadrant</h3>
+<p>These <strong>local vs global scopes</strong> and <strong>sensitivity vs predictive power metrics</strong> define a 2 by 2 goal-oriented matrix.
+Each quadrant has been named by the importance measure which is theoretically &ldquo;optimal&rdquo; for its <strong>quantity of interest</strong>.
+The equations are a simplified version of the additive breakdown of each quantity of interest (see <a href="#full_detailed_matrix">below</a> for more precise formulation).</p>
+<p>To be more specific, let&rsquo;s introduce some notations.
+Suppose that from your variables \(X = (X_1, X_2, &hellip;, X_d)\), you try to predict \(Y\) with your model \(f(X) \in \mathbb{R} \) minimizing the loss function \(l(y, f(x))\).
+\(y\) and \(x\) refer to one data point while \(Y\) and \(X\) are at population level (random variables). \(\mathbb{E}\) and \(\mathbb{V}\) respectively denotes the expectation (the &ldquo;average&rdquo;) and the variance of a variable.</p>
+<style type="text/css">
+table{text-align:center;vertical-align:center; font-size: 14px; width: 100%;}
+td, th {border: 1px solid #000000; padding: 5px 4px;}
+tbody>tr>:nth-child(odd), tbody>tr>:nth-child(even){background:none !important;}
+
+thead>tr>:nth-child(odd), thead>tr>:nth-child(even),
+tbody>tr>:nth-child(odd), tbody>tr>:nth-child(even){
+  border-collapse: separate;
+  border: 1px solid #000000;
+}
+</style>
+<p><a name="simplified_matrix"></a>
+<figure>
+  <img src=/img/post/variable_importance_feature_attribution/simplified_matrix.png >
+</figure>
+</p>
+<br>
+<h2 id="the-4-purpose-oriented-quadrants">The 4 purpose-oriented quadrants</h2>
+<p>Let&rsquo;s have a look at the 4 quadrants and the different problems they solve.
+The precise definition of their optimal solution is given in the <a href="#shapley_part">next part</a>.
+We will make this journey in chronological order because it tells a good story on how two different research communities finally meet!</p>
+<br>
+<h3>The SHAPLEY EFFECTS zone</h3>
+<h4 id="context">Context</h4>
+<p>Improving Sobol indices (1993<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>), Owen introduced an importance measure in 2014<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>, that has been developed and named &ldquo;shapley effects&rdquo; by Song et al. in 2016<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup> (see also further work and numerical experiment by Iooss et al. in 2017<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup>).
+Coming from the field of <em>Sensitivity Analysis</em> and <em>Uncertainty Quantification</em>, it aims at quantifying how much the output of a model \(f\) (for example a computer simulation of a set of complicated equations) depends on the \(X\) input parameters.
+Shapley effects are also totally relevant in machine learning where it focuses on how much the variations of the learned model \(f\) would rely on the variables \(X\).</p>
+<h4 id="the-choice-of-a-quantity-of-interest">The choice of a Quantity of interest</h4>
+<p>The quantity of interest is \(\mathbb{V}(f(X))\).
+Variance is a natural choice to quantify variations and usually more tractable than a potential alternative \(\mathbb{E}(|f(X)-\mathbb{E}(f(X))|)\) never encountered in practice.
+Note that in Sensitivity Analysis community, indices are usually normalized by the total variance, so that all Variable Importances sum to 1 (or &ldquo;near&rdquo; 1 with Sobol Indices).</p>
+<p>By looking at the 4 quadrants, a question arises: why not choosing \(\mathbb{E}(f(X))\) as a quantity of interest?
+It is definitely global.
+However it is not relevant to account for variations: positive and negative variations would annihilate into a 0 global contribution.</p>
+<p>Let&rsquo;s move on to 2017, the start the Lundberg saga in the machine learning community.</p>
+<br>
+<h3>The SHAP zone</h3>
+<h4 id="context-1">Context</h4>
+<p>Designed and implemented by Lundberg in 2017<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup>, shap a has local sensitivity focus.
+Note that although published in a machine learning conference, shap does not involve a \(Y\) target or any learning of the model \(f\).
+That&rsquo;s why I was able to apply it to a non-learned, expert based <a href="/post/covid_variable_importances_shapley/">algorithm for Covid-19 patient orientation</a>.
+However, it is strongly suited to machine learning community, because of its fast model-specific implementations.</p>
+<h4 id="the-choice-of-a-quantity-of-interest-1">The choice of a Quantity of interest</h4>
+<p>The quantity of interest sticks to the most natural choice: \(f(x)\) for \(x \in X\).
+Unlike the global scope, having both positive and negative contributions makes sense here.
+Knowing the direction of variation is totally relevant and allow nice visual exploration of shap values (implemented in the <a href="https://github.com/slundberg/shap">shap package</a>).</p>
+<br>
+<h3>The SHAPloss zone</h3>
+<h4 id="context-2">Context</h4>
+<p>Published in Nature in 2020<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup> (but <a href="https://arxiv.org/pdf/1905.04610.pdf">pre-print</a> in 2019), Lundberg et al. presented an innovation!
+Although the paper focuses on tree-based models, a new idea has been proposed: using shap to breakdown the model error into a feature contributions (see §2.7.4 and Figure 5 of the paper), making it very useful for supervised performance monitoring of a model in production.
+I&rsquo;ve made up the name SHAPloss to insist on the different goal achieved, although implementation is done inside <a href="https://github.com/slundberg/shap/blob/master/notebooks/tree_explainer/Explaining%20the%20Loss%20of%20a%20Model.ipynb">shap</a> package by changing only the <em>model_output</em> argument in <em>TreeExplainer</em>.</p>
+<h4 id="the-choice-of-a-quantity-of-interest-2">The choice of a Quantity of interest</h4>
+<p>The quantity of interest is the local loss \(-l(y, f(x))\) for \((x, y) \in (X, Y)\).
+Note that \(l\) could naturally be the logloss for a classification problem, while being the MSE for a regression.
+The minus sign is added so that a large positive contribution \(\phi_i\) means a feature which increases the performance a lot (= decrease a lot the model loss \(l\)).</p>
+<br>
+<h3>The SAGE zone</h3>
+<h4 id="context-3">Context</h4>
+<p>With a preprint submitted in April 2020<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup>, Covert, Lundberg et al. introduce SAGE (Shapley Additive Global importancE), a solution of the global formulation of SHAPloss and efficient ways of computing it.
+Note that the paper goes far beyond a simple local to global generalization of SHAPloss, but it also includes a review of existing importance methods and introduces a theoretical universal predictive power.
+Furthermore, the SAGE paper makes a clear reference to what we called the Shapley Effects zone, explaining how SAGE differs in its goal.
+In some ways, it closes the 4-quadrant loop we have explored.</p>
+<h4 id="the-choice-of-a-quantity-of-interest-3">The choice of a Quantity of interest</h4>
+<p>The quantity of interest is \(\mathbb{E}[-l(Y, f(X))]\), a natural agregation of the local SHAPloss formulation.
+Unlike the SHAP to Shapley Effects transition, taking the raw expectation works here.
+This is because there is almost no positive-negative annihilation, for adding a variable usually does not increase the loss.</p>
+<br>
+<p><a name="shapley_part"></a></p>
+<h2 id="a-shapley-solution-for-each-quadrant">A shapley solution for each quadrant</h2>
+<p>Now that the purpose and its quantity of interest have been set, Shapley values <sup id="fnref:8"><a href="#fn:8" class="footnote-ref" role="doc-noteref">8</a></sup> theory offers optimal solutions given desirable properties for each quadrant.
+Let&rsquo;s introduce <strong>Shapley values</strong> first and see how it applies to the various <strong>quantities of interest</strong>.</p>
+<br>
+<h3 id="shapley-values">Shapley values</h3>
+<p>The Shapley value \(\phi_i^Q\) is an attribution method which &ldquo;fairly&rdquo; shares the quantity of interest \(Q(P_d)\) obtained by the coalition \(P_d = \{1, 2, .., d\}\) between each entity \(i \in P_d\).
+\(Q(u)\) is a function returning the quantity of interest of coalition \(u\).
+A coalition is a set of entity \(i\): there are \(2^d\) possible coalitions, including \(\emptyset\) and \(P_d\).
+Finally, let&rsquo;s denote by \(S_i^d\) the set of all possible coalitions <strong>which do not contain the entity</strong> \(i\).</p>
+<p>The Shapley values \(\phi_i^Q\) are the only quantity weighting which satisfies 5 desirable properties (check §3.1 of SAGE paper<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> for their meaning) named symmetry, linearity, monotonicity, dummy and finally efficiency, which we write here:<br>
+\(Q(P_d)=Q(\emptyset) + \sum[\phi_i^Q]\)</p>
+<p>There is a lot to talk about concerning the formula of this Shapley values.
+But it is slightly off-topic and I would rather focusing on how this Shapley idea is applied to the 4 quadrants.
+You can see the formula as a footnote<sup id="fnref:9"><a href="#fn:9" class="footnote-ref" role="doc-noteref">9</a></sup>.</p>
+<br>
+<h3 id="application-to-feature-attribution">Application to feature attribution</h3>
+<p>Using Shapley values in our context means that the \(i\) entities will be the \(X_i\) variables.
+The two remaining tasks are to choose the quantity of interest \(Q\) and to define \(f\) <strong>for each coalition of variables</strong>.
+The solution chosen for our 4-quadrant is to take the expectation along missing variables: \(f_u(x) = \mathbb{E}(f(X|X_u=x_u))\).
+For more information, see an example for 2 variables in footnote<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup> and details in the SAGE paper.</p>
+<p>The 4 quantities of interest translates into 4 \(Q(u)\) functions, which lead to the 4 names of the quadrants: the Variable Importance methods which have desirable properties!</p>
+<p>Let&rsquo;s rewrite the 2 by 2 matrix with more precise quantities of interest \(Q(u)\), which are functions of \(f\) and of all feature coalitions \(u\) (\(u \in \{\emptyset, \{X_1\},\{X_2\}, .., \{X_1, X_2\}, .. \}\)).
+Additional notation: \(\bar{f}=\mathbb{E}(f(X))\).</p>
+<p><a name="full_detailed_matrix"></a>
+<figure>
+  <img src=/img/post/variable_importance_feature_attribution/full_detailed_matrix.png >
+</figure>
+</p>
+<p>The four Shapley values <a href="https://github.com/slundberg/shap">\(\phi_i^{SHAP}(x)\)</a>, <a href="https://github.com/slundberg/shap/blob/master/notebooks/tree_explainer/Explaining%20the%20Loss%20of%20a%20Model.ipynb">\(\phi_i^{LOSS}(x)\)</a>, <a href="https://gitlab.com/CEMRACS17/shapley-effects">\(\phi_i^{EFF}\)</a> and <a href="https://github.com/icc2115/sage">\(\phi_i^{SAGE}\)</a> are the &ldquo;optimal&rdquo; solutions of each quadrant.
+Note that there are 2 links between those values:</p>
+<ul>
+<li>\(\phi_i^{SAGE} = \mathbb{E}[\phi_i^{LOSS}(x)] \)</li>
+<li>Potentially, if the loss function \(l\) is the MSE, we have \(\phi_i^{EFF} = \phi_i^{SAGE} \) with \(Y = f(X)\).</li>
+</ul>
+<br>
+<h2 id="future-perspectives">Future perspectives</h2>
+<p>We have just seen that &ldquo;optimal&rdquo; solutions have been defined and that implementations are available, for each quadrant.
+So, has the full story being told ?</p>
+<p>On the one hand, I think the field of additive importance measures has reached a maturity milestone by optimally filling the 4 quadrants and therefore closing the loop.
+Until the SAGE article, I was not aware of any clear formalization of the links between Sensitivity Analysis and the predictive power importance.</p>
+<p>On the other hand, there is still room for enhancements concerning Variable Importance and feature attribution, concerning both a better use of these techniques and exploring value outside of this perimeter:</p>
+<ul>
+<li>Towards a better use of the methods in the quadrants:
+<ul>
+<li><strong>Diffusion of SHAPloss in data science community</strong>: Although SHAP has had a very fast adoption rate in the data science community in about 2 years, SHAPloss has currently stayed under the radar (except from a <a href="https://github.com/jphall663/interpretable_machine_learning_with_python/blob/master/debugging_resid_analysis_redux.ipynb">inspirational notebook</a> by Hall).
+I see value for supervised (when ground-truth labels are known) performance monitoring of a model in production.</li>
+<li><strong>Improvements of computation efficiency</strong>: These methods are computationally intensive and can rapidly become un-tractable, except for tree-based models.
+Improvements in implementation and statistical estimation could improve the usability (see recent work<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup>).</li>
+</ul>
+</li>
+<li>Beyond the 2 by 2 matrix:
+<ul>
+<li><strong>Fairness-based quantities of interest</strong>: Why not imagining other columns?
+Understanding the model behaviour and the model performance are the first important steps.
+But responsible data science also include a bias and fairness monitoring when relevant.
+Theoretically, it seems possible to chose a fairness-based relevant quantity of interest \(Q(u)\) and build its Shapley value to see how &ldquo;unfairness&rdquo; would be divided between features.
+Lundberg <a href="https://github.com/slundberg/shap/blob/master/notebooks/general/Explaining%20Quantitative%20Measures%20of%20Fairness.ipynb">opens the way</a> with the demographic parity metrics, which cleverly stays within the SHAP zone.</li>
+<li><strong>Explore non additive</strong> feature attribution methods.
+Should it be done with a multiplicative breakdown or with totally different re-weighting methods<sup id="fnref:12"><a href="#fn:12" class="footnote-ref" role="doc-noteref">12</a></sup>, quantifying how much a quantity of interest rely on the input features is still broad research and practice field.</li>
+</ul>
+</li>
+</ul>
+<br>
+<p><a name="take_away_message"></a></p>
+<h2 id="take-away-messages">Take-away messages</h2>
+<p>I hope that this post has:</p>
+<ul>
+<li>Enlightened your <strong>understanding</strong> of the different goals and scopes of <strong>Variable Importances</strong>.</li>
+<li>Convinced you that the field of <strong>additive importance measures</strong> is definitely more mature than ever since Sobol started it in the 1990s.</li>
+<li>Made you think about the most <strong>effective quadrant</strong> to choose, given your purpose.</li>
+</ul>
+<p>Interested by an experiment with results and <a href="https://github.com/datajms/COVID19_attribution">code</a> for SHAP and SHAPLEY EFFECTS zone ?
+You can check my article on <a href="/post/covid_variable_importances_shapley/">Variable importance for the Covid-19 patient orientation algorithm</a>.
+Furthermore, you can check the SAGE paper<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> for more examples of non optimal but computationally light methods and how they fit in the 2 by 2 matrix.</p>
+<br>
+<p>Congrats to <a href="https://scottlundberg.com/">Scott Lundberg</a> for having pioneered the way in so many topics and ideas in just a few years!</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Sobol, I. M. (1993). Sensitivity estimates for nonlinear mathematical models. Mathematical modelling and computational experiments, 1(4), 407-414.
+Incidentally, the only online version I found is a <a href="http://www.andreasaltelli.eu/file/repository/sobol1993.pdf">photocopy, annotated by hand</a> by I. M. Sobol himself, sent to Andrea Saltelli, a well known researcher in Sensitivity Analysis. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.377.6450&amp;rep=rep1&amp;type=pdf">Owen, A. B. (2014). Sobol&rsquo;indices and Shapley value. SIAM/ASA Journal on Uncertainty Quantification, 2(1), 245-251.</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:3" role="doc-endnote">
+<p><a href="https://pdfs.semanticscholar.org/6a25/48b159bc3bf6c74e13b74a037917951d75ca.pdf">Song, E., Nelson, B. L., &amp; Staum, J. (2016). Shapley effects for global sensitivity analysis: Theory and computation. SIAM/ASA Journal on Uncertainty Quantification, 4(1), 1060-1083.</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:4" role="doc-endnote">
+<p><a href="https://hal.inria.fr/hal-01556303v3/document">Iooss, B., &amp; Prieur, C. (2019). Shapley effects for sensitivity analysis with correlated inputs: comparisons with Sobol&rsquo;indices, numerical estimation and applications. International Journal for Uncertainty Quantification, 9(5).</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:5" role="doc-endnote">
+<p><a href="http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf">Lundberg, S. M., &amp; Lee, S. I. (2017). A unified approach to interpreting model predictions. In Advances in neural information processing systems (pp. 4765-4774).</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:6" role="doc-endnote">
+<p>Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., &hellip; &amp; Lee, S. I. (2020). From local explanations to global understanding with explainable AI for trees. Nature machine intelligence, 2(1), 2522-5839. <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:7" role="doc-endnote">
+<p><a href="https://arxiv.org/pdf/2004.00668.pdf">Covert, I., Lundberg, S., &amp; Lee, S. I. (2020). Understanding Global Feature Contributions Through Additive Importance Measures. arXiv preprint arXiv:2004.00668.</a> <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:8" role="doc-endnote">
+<p><a href="http://www.library.fa.ru/files/Roth2.pdf#page=39">Shapley, L. S. (1953). A value for n-person games. Contributions to the Theory of Games, 2(28), 307-317.</a> <a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:9" role="doc-endnote">
+<p>\( \phi_i^Q = \sum_{u \in S_i^d}(\alpha_{|u|} * [Q(u \cup { i}) - Q(u)]) \text{ , where } \alpha_{k} = \frac{1}{d} {\binom{d-1}{k}}^{-1}  \) <a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:10" role="doc-endnote">
+<p>Let&rsquo;s suppose we have 2 features, then there are 4 coalitions to form:
+\(f_\emptyset((x_1, x_2)) = \mathbb{E}(f(X))\), \(f_1(x_1, x_2) = \mathbb{E}(f(X | X_1=x_1))\), \(f_2(x_1, x_2) = \mathbb{E}(f(X | X_2=x_2))\) and \(f_{1,2}(x_1, x_2) = \mathbb{E}(f(X | X_1=x_1, X_2=x_2)) = f(x_1, x_2)\) <a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:11" role="doc-endnote">
+<p>This recent preprint by Plischke et al. improves Shapley effects computation by several orders of magnitude: <a href="https://arxiv.org/pdf/2002.12024.pdf">Plischke, E., Rabitti, G., &amp; Borgonovo, E. (2020). Computing Shapley Effects for Sensitivity Analysis. arXiv preprint arXiv:2002.12024.</a> <a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:12" role="doc-endnote">
+<p><a href="https://hal.archives-ouvertes.fr/hal-01897642/document">Bachoc, F., Gamboa, F., Loubes, J. M., &amp; Risser, L. (2018). Entropic Variable Boosting for Explainability &amp; Interpretability in Machine Learning.</a> <a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+
+        <aside class="hidden lg:block tableOfContentContainer" id="tableOfContentContainer">
+            <div id="TableOfContentsDiv">
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#which-purpose-for-variable-importance-">Which purpose for Variable Importance ?</a>
+      <ul>
+        <li><a href="#set-your-goal">Set your goal&hellip;</a></li>
+        <li><a href="#-by-choosing-a-quadrant">&hellip; by choosing a quadrant</a></li>
+      </ul>
+    </li>
+    <li><a href="#the-4-purpose-oriented-quadrants">The 4 purpose-oriented quadrants</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#a-shapley-solution-for-each-quadrant">A shapley solution for each quadrant</a>
+      <ul>
+        <li><a href="#shapley-values">Shapley values</a></li>
+        <li><a href="#application-to-feature-attribution">Application to feature attribution</a></li>
+      </ul>
+    </li>
+    <li><a href="#future-perspectives">Future perspectives</a></li>
+    <li><a href="#take-away-messages">Take-away messages</a></li>
+  </ul>
+</nav>
+            </div>
+        </aside>
+    </main>
+    <script>
+    window.addEventListener('DOMContentLoaded', () => {
+
+        const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+
+                if (entry.intersectionRatio > 0) {
+
+                    
+                    document.querySelector(`aside nav li a[href="#${id}"]`).parentElement.classList.add('active');
+                } else {
+
+                    document.querySelector(`aside nav li a[href="#${id}"]`).parentElement.classList.remove('active');
+                }
+            });
+        });
+
+        document.querySelectorAll('h1[id],h2[id],h3[id],h4[id]').forEach((section) => {
+            observerForTableOfContentActiveState.observe(section);
+        });
+
+    });
+
+function clearActiveStatesInTableOfContents() {
+    document.querySelectorAll('aside nav li').forEach((section) => {
+        section.classList.remove('active');
+    });
+}
+</script>
+
+
+  
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+        
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+        
+            
+            
+                <i class="fa fa-tags"></i>
+                
+                
+                <li><a class="article-category-link" href="/tags/ideas">ideas</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/feature-importance">feature importance</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/xai">XAI</a></li>
+                
+                
+                <li><a class="article-category-link" href="/tags/some-math">some math</a></li>
+                
+            
+        
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+</article>
+
+    <article class="post">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "datajms-com" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+
+<ul class="actions pagination">
+    
+        <li><a href="/post/covid_variable_importances_shapley/"
+                class="button big previous">Breaking down factors of Covid-19 orientation algorithm by importance</a></li>
+    
+
+    
+</ul>
+
+
+    </div>
+    
+    
+    </div>
+    <a id="back-to-top" href="#" class="fa fa-arrow-up fa-border fa-2x"></a>
+    
+
+    
+      
+    
+
+    
+      
+      
+      
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+        
+        
+        
+        <script>hljs.configure({languages: []}); hljs.initHighlightingOnLoad();</script>
+      
+    
+    
+    
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/skel/3.0.1/skel.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.1.25/jquery.fancybox.min.js"></script>
+      <script src="/js/util.js"></script>
+      <script src="/js/main.js"></script>
+      <script src="/js/backToTop.js"></script>
+    
+
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+      <script src="//yihui.name/js/math-code.js"></script>
+<script async
+src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+  </body>
+</html>
+

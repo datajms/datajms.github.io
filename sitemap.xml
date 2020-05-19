@@ -3,6 +3,46 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/</loc>
+    <lastmod>2020-05-16T15:36:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/variable_importance_feature_attribution/</loc>
+    <lastmod>2020-05-16T15:36:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/feature-importance/</loc>
+    <lastmod>2020-05-16T15:36:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ideas/</loc>
+    <lastmod>2020-05-16T15:36:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/</loc>
+    <lastmod>2020-05-16T15:36:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/some-math/</loc>
+    <lastmod>2020-05-16T15:36:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/</loc>
+    <lastmod>2020-05-16T15:36:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/xai/</loc>
+    <lastmod>2020-05-16T15:36:11+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/covid_variable_importances_shapley/</loc>
     <lastmod>2020-05-01T15:15:56+02:00</lastmod>
   </url>
@@ -13,27 +53,7 @@
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-05-01T15:15:56+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/post/</loc>
-    <lastmod>2020-05-01T15:15:56+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-05-01T15:15:56+02:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/tags/with-code/</loc>
-    <lastmod>2020-05-01T15:15:56+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/xai/</loc>
     <lastmod>2020-05-01T15:15:56+02:00</lastmod>
   </url>
   

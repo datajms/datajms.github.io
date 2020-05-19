@@ -25,7 +25,7 @@
         "dateModified" : "2020-05-01 15:15:56 \x2b0200 CEST",
         "url" : "\/post\/covid_variable_importances_shapley\/",
         "wordCount" : "3090",
-        "keywords" : [ "Covid-19","XAI","with code","Blog" ]
+        "keywords" : [ "Covid-19","feature importance","XAI","with code","Blog" ]
     }
     </script>
         
@@ -87,7 +87,7 @@
 
 
 
-<meta itemprop="keywords" content="Covid-19,XAI,with code," />
+<meta itemprop="keywords" content="Covid-19,feature importance,XAI,with code," />
         
 
         
@@ -254,6 +254,54 @@ if (!doNotTrack) {
                 
                         <article class="mini-post">
                             <header>
+                                <h3><a href="/post/variable_importance_feature_attribution/">Do you know the 4 types of additive Variable Importances?</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-16'>
+                                    May 16, 2020</time>
+                            </header>
+                            
+    
+
+    
+        
+        
+
+
+
+
+
+
+
+  
+
+
+        
+        
+        
+
+        <a href="/post/variable_importance_feature_attribution/" class="image featured">
+            <img src="/img/post/variable_importance_feature_attribution//thumbnail.png" alt="">
+        </a>
+    
+
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
+                                <h3><a href="/post/">Posts</a></h3>
+                                
+                                <time class="published" datetime=
+                                    '2020-05-16'>
+                                    May 16, 2020</time>
+                            </header>
+                            
+
+                        </article>
+                
+                        <article class="mini-post">
+                            <header>
                                 <h3><a href="/post/covid_variable_importances_shapley/">Breaking down factors of Covid-19 orientation algorithm by importance</a></h3>
                                 
                                 <time class="published" datetime=
@@ -282,54 +330,6 @@ if (!doNotTrack) {
 
         <a href="/post/covid_variable_importances_shapley/" class="image featured">
             <img src="/img/post/covid_variable_importances_shapley//thumbnail.png" alt="">
-        </a>
-    
-
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/post/">Posts</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2020-05-01'>
-                                    May 1, 2020</time>
-                            </header>
-                            
-
-                        </article>
-                
-                        <article class="mini-post">
-                            <header>
-                                <h3><a href="/post/covid_scoring_system_presentation/">Simplifying the French Covid-19 patient orientation algorithm</a></h3>
-                                
-                                <time class="published" datetime=
-                                    '2020-04-17'>
-                                    April 17, 2020</time>
-                            </header>
-                            
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="/post/covid_scoring_system_presentation/" class="image featured">
-            <img src="/img/post/covid_scoring_system_presentation//thumbnail.png" alt="">
         </a>
     
 
@@ -605,7 +605,7 @@ The main design choice is the simulation of the factor distributions to create t
 In brief, although our 8 factors are binary, we stick into the SALib framework, use uniform 0-1 distributions and modify the decision function to account for the scenario distributions<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>.</p>
 <br>
 <h3 id="shapley-effects">Shapley Effects</h3>
-<p>Introduced by Owen in 2013<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> and extended to correlated factors by Song et al in 2016<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> and Iooss &amp; Prieur in 2017<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>, Shapley Effects are similar to the total-order Sobol indices.
+<p>Introduced by Owen in 2014<sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup> and extended to correlated factors by Song et al in 2016<sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup> and Iooss &amp; Prieur in 2017<sup id="fnref:6"><a href="#fn:6" class="footnote-ref" role="doc-noteref">6</a></sup>, Shapley Effects are similar to the total-order Sobol indices.
 The re-written variance decomposition, with a smart use of shapley values from game theory, ensures that the <strong>Shapley Effects add up to 1</strong>.
 Moreover, they can be extended to dependent factors - but this goes beyond the scope of this article.</p>
 <p>However, they <strong>come at a price: their computation</strong>.
@@ -851,6 +851,9 @@ function clearActiveStatesInTableOfContents() {
                 <li><a class="article-category-link" href="/tags/covid-19">Covid-19</a></li>
                 
                 
+                <li><a class="article-category-link" href="/tags/feature-importance">feature importance</a></li>
+                
+                
                 <li><a class="article-category-link" href="/tags/xai">XAI</a></li>
                 
                 
@@ -896,6 +899,9 @@ function clearActiveStatesInTableOfContents() {
                 class="button big previous">Simplifying the French Covid-19 patient orientation algorithm</a></li>
     
 
+    
+        <li><a href="/post/variable_importance_feature_attribution/"
+                class="button big next">Do you know the 4 types of additive Variable Importances?</a></li>
     
 </ul>
 

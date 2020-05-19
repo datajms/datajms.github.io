@@ -6,10 +6,20 @@
     <description>Recent content on Data Science Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 May 2020 15:15:56 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 16 May 2020 15:36:11 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Do you know the 4 types of additive Variable Importances?</title>
+      <link>/post/variable_importance_feature_attribution/</link>
+      <pubDate>Sat, 16 May 2020 15:36:11 +0200</pubDate>
+      
+      <guid>/post/variable_importance_feature_attribution/</guid>
+      <description>Facing complex models, both computer simulation and machine learning practitioners have pursued similar objectives: to see how results could be broken down and linked to the inputs. Whether it is called Sensitivity Analysis or Variable Importance in the context of explainable AI, some of their methods share an important component: the Shapley values.
+This article presents a structured 2 by 2 matrix to think about Variable Importances in terms of their goals.</description>
+    </item>
     
     <item>
       <title>Breaking down factors of Covid-19 orientation algorithm by importance</title>
