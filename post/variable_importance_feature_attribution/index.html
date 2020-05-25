@@ -24,7 +24,7 @@
         "datePublished": "2020-05-16 15:36:11 \x2b0200 CEST",
         "dateModified" : "2020-05-16 15:36:11 \x2b0200 CEST",
         "url" : "\/post\/variable_importance_feature_attribution\/",
-        "wordCount" : "2558",
+        "wordCount" : "2556",
         "keywords" : [ "ideas","feature importance","XAI","some math","Blog" ]
     }
     </script>
@@ -83,7 +83,7 @@
 <meta itemprop="description" content="From Sobol indices to SAGE values: different purposes, same optimality">
 <meta itemprop="datePublished" content="2020-05-16T15:36:11&#43;02:00" />
 <meta itemprop="dateModified" content="2020-05-16T15:36:11&#43;02:00" />
-<meta itemprop="wordCount" content="2558">
+<meta itemprop="wordCount" content="2556">
 
 
 
@@ -406,7 +406,7 @@ if (!doNotTrack) {
             May 16, 2020</time>
         <span class="author">Jean-Matthieu Schertzer</span>
         
-            <p>13 minute read</p>
+            <p>12 minute read</p>
         
         
     </div>
@@ -441,6 +441,24 @@ if (!doNotTrack) {
       </ul>
     </section>
   
+
+  
+
+<div id="revue-embed">
+  <form action="https://www.getrevue.co/profile/datajms/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+  <div style="display: flex; align-items: bottom;">
+    <div class="revue-form-group" style="align-self: flex-end; width: 500px;">
+      <label for="member_email">Subscribe to our Data Science Ideas newsletter to get notified about new posts</label>
+      <input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]" id="member_email">
+    </div>
+    <div class="revue-form-actions" style="align-self: flex-end; margin-bottom: 4px;">
+      <input type="submit" value="Subscribe" name="member[subscribe]" id="member_submit" style="height: 44px; color: white; background-color: #B71520; border-radius: 0px 25px 25px 0px;">
+    </div>
+  </div>
+  </form>
+</div>
+
+
 
   
   
@@ -552,7 +570,7 @@ Note that the paper goes far beyond a simple local to global generalization of S
 Furthermore, the SAGE paper makes a clear reference to what we called the Shapley Effects zone, explaining how SAGE differs in its goal.
 In some ways, it closes the 4-quadrant loop we have explored.</p>
 <h4 id="the-choice-of-a-quantity-of-interest-3">The choice of a Quantity of interest</h4>
-<p>The quantity of interest is \(\mathbb{E}[-l(Y, f(X))]\), a natural agregation of the local SHAPloss formulation.
+<p>The quantity of interest is \(\mathbb{E}[-l(Y, f(X))]\), a natural aggregation of the local SHAPloss formulation.
 Unlike the SHAP to Shapley Effects transition, taking the raw expectation works here.
 This is because there is almost no positive-negative annihilation, for adding a variable usually does not increase the loss.</p>
 <br>
@@ -574,12 +592,11 @@ You can see the formula as a footnote<sup id="fnref:9"><a href="#fn:9" class="fo
 <br>
 <h3 id="application-to-feature-attribution">Application to feature attribution</h3>
 <p>Using Shapley values in our context means that the \(i\) entities will be the \(X_i\) variables.
-The two remaining tasks are to choose the quantity of interest \(Q\) and to define \(f\) <strong>for each coalition of variables</strong>.
+The two remaining tasks are to choose the quantity of interest \(Q\) and to define \(f\) <strong>for each coalition of variables</strong> \(u\).
 The solution chosen for our 4-quadrant is to take the expectation along missing variables: \(f_u(x) = \mathbb{E}(f(X|X_u=x_u))\).
 For more information, see an example for 2 variables in footnote<sup id="fnref:10"><a href="#fn:10" class="footnote-ref" role="doc-noteref">10</a></sup> and details in the SAGE paper.</p>
 <p>The 4 quantities of interest translates into 4 \(Q(u)\) functions, which lead to the 4 names of the quadrants: the Variable Importance methods which have desirable properties!</p>
-<p>Let&rsquo;s rewrite the 2 by 2 matrix with more precise quantities of interest \(Q(u)\), which are functions of \(f\) and of all feature coalitions \(u\) (\(u \in \{\emptyset, \{X_1\},\{X_2\}, .., \{X_1, X_2\}, .. \}\)).
-Additional notation: \(\bar{f}=\mathbb{E}(f(X))\).</p>
+<p>Let&rsquo;s rewrite the 2 by 2 matrix with more precise quantities of interest \(Q(u)\), which are functions of \(f\) and of all feature coalitions \(u\) (\(u \in \{\emptyset, \{X_1\},\{X_2\}, .., \{X_1, X_2\}, .. \}\)).</p>
 <p><a name="full_detailed_matrix"></a>
 <figure>
   <img src=/img/post/variable_importance_feature_attribution/full_detailed_matrix.png >
@@ -601,7 +618,7 @@ Until the SAGE article, I was not aware of any clear formalization of the links 
 <ul>
 <li>Towards a better use of the methods in the quadrants:
 <ul>
-<li><strong>Diffusion of SHAPloss in data science community</strong>: Although SHAP has had a very fast adoption rate in the data science community in about 2 years, SHAPloss has currently stayed under the radar (except from a <a href="https://github.com/jphall663/interpretable_machine_learning_with_python/blob/master/debugging_resid_analysis_redux.ipynb">inspirational notebook</a> by Hall).
+<li><strong>Diffusion of SHAPloss in data science community</strong>: Although SHAP has had a very fast adoption rate in the data science community in about 2 years, SHAPloss has currently stayed under the radar (except from an <a href="https://github.com/jphall663/interpretable_machine_learning_with_python/blob/master/debugging_resid_analysis_redux.ipynb">inspirational notebook</a> by Hall).
 I see value for supervised (when ground-truth labels are known) performance monitoring of a model in production.</li>
 <li><strong>Improvements of computation efficiency</strong>: These methods are computationally intensive and can rapidly become un-tractable, except for tree-based models.
 Improvements in implementation and statistical estimation could improve the usability (see recent work<sup id="fnref:11"><a href="#fn:11" class="footnote-ref" role="doc-noteref">11</a></sup>).</li>
@@ -628,7 +645,7 @@ Should it be done with a multiplicative breakdown or with totally different re-w
 <li>Convinced you that the field of <strong>additive importance measures</strong> is definitely more mature than ever since Sobol started it in the 1990s.</li>
 <li>Made you think about the most <strong>effective quadrant</strong> to choose, given your purpose.</li>
 </ul>
-<p>Interested by an experiment with results and <a href="https://github.com/datajms/COVID19_attribution">code</a> for SHAP and SHAPLEY EFFECTS zone ?
+<p>Interested in an experiment with results and <a href="https://github.com/datajms/COVID19_attribution">code</a> for SHAP and SHAPLEY EFFECTS zone ?
 You can check my article on <a href="/post/covid_variable_importances_shapley/">Variable importance for the Covid-19 patient orientation algorithm</a>.
 Furthermore, you can check the SAGE paper<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> for more examples of non optimal but computationally light methods and how they fit in the 2 by 2 matrix.</p>
 <br>
@@ -776,6 +793,22 @@ function clearActiveStatesInTableOfContents() {
   </footer>
 
 </article>
+
+
+<div id="revue-embed">
+  <form action="https://www.getrevue.co/profile/datajms/add_subscriber" method="post" id="revue-form" name="revue-form"  target="_blank">
+  <div style="display: flex; align-items: bottom;">
+    <div class="revue-form-group" style="align-self: flex-end; width: 500px;">
+      <label for="member_email">Subscribe to our Data Science Ideas newsletter to get notified about new posts</label>
+      <input class="revue-form-field" placeholder="Your email address..." type="email" name="member[email]" id="member_email">
+    </div>
+    <div class="revue-form-actions" style="align-self: flex-end; margin-bottom: 4px;">
+      <input type="submit" value="Subscribe" name="member[subscribe]" id="member_submit" style="height: 44px; color: white; background-color: #B71520; border-radius: 0px 25px 25px 0px;">
+    </div>
+  </div>
+  </form>
+</div>
+
 
     <article class="post">
         <div id="disqus_thread"></div>
