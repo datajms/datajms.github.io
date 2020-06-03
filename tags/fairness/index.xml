@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ideas on Data Science Ideas</title>
-    <link>/tags/ideas/</link>
-    <description>Recent content in ideas on Data Science Ideas</description>
+    <title>fairness on Data Science Ideas</title>
+    <link>/tags/fairness/</link>
+    <description>Recent content in fairness on Data Science Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Jun 2020 10:00:12 +0200</lastBuildDate>
     
-	<atom:link href="/tags/ideas/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/fairness/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,16 +19,6 @@
       <guid>/post/fairness_justice_us/</guid>
       <description>This article addresses a very serious topic in our post-slavery, post-colonisation and post-segregation world. How is it that, while laws explicitly condemn disparate treatments or outcomes1, there are still clear differences that move part of public opinion - and that you should move everyone by the way.
 This post will expose and explain a situation where Black Lives Mattered less. In Oklahoma, from 1990 to 2012, 143 offenders were sentenced to death.</description>
-    </item>
-    
-    <item>
-      <title>Do you know the 4 types of additive Variable Importances?</title>
-      <link>/post/variable_importance_feature_attribution/</link>
-      <pubDate>Sat, 16 May 2020 15:36:11 +0200</pubDate>
-      
-      <guid>/post/variable_importance_feature_attribution/</guid>
-      <description>Facing complex models, both computer simulation and machine learning practitioners have pursued similar objectives: to see how results could be broken down and linked to the inputs. Whether it is called Sensitivity Analysis or Variable Importance in the context of explainable AI, some of their methods share an important component: the Shapley values.
-This article presents a structured 2 by 2 matrix to think about Variable Importances in terms of their goals.</description>
     </item>
     
   </channel>
