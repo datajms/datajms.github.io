@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>no math on Data Science Ideas</title>
+    <title>no math on Data Science &amp; AI Ideas</title>
     <link>/tags/no-math/</link>
-    <description>Recent content in no math on Data Science Ideas</description>
+    <description>Recent content in no math on Data Science &amp; AI Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Jun 2020 10:00:12 +0200</lastBuildDate>
@@ -12,13 +12,12 @@
     
     
     <item>
-      <title>Death sentences and race-ethnicity biases</title>
+      <title>Death sentences and race-ethnicity</title>
       <link>/post/fairness_justice_death_sentence/</link>
       <pubDate>Wed, 03 Jun 2020 10:00:12 +0200</pubDate>
       
       <guid>/post/fairness_justice_death_sentence/</guid>
-      <description>This article addresses a very serious topic in our post-slavery, post-colonisation and post-segregation world. How is it that, while laws explicitly condemn disparate treatments or outcomes1, there are still clear differences? These differences move part of the public opinion - and that should move everyone by the way because this problem is not going to resolve only with minorities.
-This post will expose and explain a situation where Black Lives Mattered less.</description>
+      <description>This post will present and explain a situation where Black Lives Mattered less. In Oklahoma, from 1990 to 2012, 143 offenders were sentenced to death. In 2017, Pierce et al.1 collected and analyzed the homicide data (4668 offenders) and the death sentences. It shows that there are several race/ethnicity effects involved in the death sentences outcomes. The paper contains all details. Terminology used (&amp;ldquo;nonwhite&amp;rdquo;, &amp;ldquo;race&amp;rdquo;) comes from the paper. I don&amp;rsquo;t like the &amp;ldquo;nonwhite&amp;rdquo; term, but I cannot easily replace it each time with Black, Hispanic, Native American and Asian.</description>
     </item>
     
     <item>
