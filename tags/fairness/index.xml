@@ -6,10 +6,21 @@
     <description>Recent content in fairness on Data Science &amp; AI Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 03 Jun 2020 10:00:12 +0200</lastBuildDate>
+    <lastBuildDate>Fri, 24 Feb 2023 12:16:19 +0100</lastBuildDate>
     
 	<atom:link href="/tags/fairness/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Exploring ChatGPT guardails: from protected to forgotten countries (Part 1)</title>
+      <link>/post/chatgpt_country_guardrails_study/</link>
+      <pubDate>Fri, 24 Feb 2023 12:16:19 +0100</pubDate>
+      
+      <guid>/post/chatgpt_country_guardrails_study/</guid>
+      <description>OpenAI ChatGPT has built guardrails on limiting the generation of negative content. How do these guardrails behave for countries? Spoiler: there are some gaps and disparities in ChatGPT safety mechanisms. Based on 24100 ChatGPT queries, this blog post is an exploration of ChatGPT responses when prompted to generate negative content about a country.
+If you are in a hurry, go and see the early results.
+1. Context: ChatGPT guardrails and harmful content prevention.</description>
+    </item>
     
     <item>
       <title>Death sentences and race-ethnicity</title>
