@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>eu ai act on Trusted AI Ideas</title>
+    <link>/tags/eu-ai-act/</link>
+    <description>Recent content in eu ai act on Trusted AI Ideas</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Jun 2023 12:16:19 +0100</lastBuildDate>
+    
+	<atom:link href="/tags/eu-ai-act/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>EU AI Act explicitly mentions SMEs and start-ups, but how?</title>
+      <link>/post/sme_startup_eu_ai_act/</link>
+      <pubDate>Wed, 14 Jun 2023 12:16:19 +0100</pubDate>
+      
+      <guid>/post/sme_startup_eu_ai_act/</guid>
+      <description>European Union is on the verge of adopting a horizontal Regulation on Artificial Intelligence (AI Act). Specific mentions of SMEs and start-ups are included. Let&amp;rsquo;s analyze them.
+Here is the breakdown of the 30 explicit mentions, and their goals, of SMEs and start-ups in the AI Act Proposal:
+ to smoothen some Provider and Deployer obligations (#12 mentions), to possibly reduce penalties when infringement occurs (#2), to facilitate access (process and price) to compliance processes (#7), to include them more as stakeholder in EU Governance (#4) and to affirm a will to support their innovation.</description>
+    </item>
+    
+  </channel>
+</rss>

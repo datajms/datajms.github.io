@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Data Science &amp; AI Ideas</title>
+    <title>Tags on Trusted AI Ideas</title>
     <link>/tags/</link>
-    <description>Recent content in Tags on Data Science &amp; AI Ideas</description>
+    <description>Recent content in Tags on Trusted AI Ideas</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Feb 2023 12:16:19 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 14 Jun 2023 12:16:19 +0100</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ai regulation</title>
+      <link>/tags/ai-regulation/</link>
+      <pubDate>Wed, 14 Jun 2023 12:16:19 +0100</pubDate>
+      
+      <guid>/tags/ai-regulation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>eu ai act</title>
+      <link>/tags/eu-ai-act/</link>
+      <pubDate>Wed, 14 Jun 2023 12:16:19 +0100</pubDate>
+      
+      <guid>/tags/eu-ai-act/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>innovation</title>
+      <link>/tags/innovation/</link>
+      <pubDate>Wed, 14 Jun 2023 12:16:19 +0100</pubDate>
+      
+      <guid>/tags/innovation/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>fairness</title>
@@ -35,24 +62,6 @@
       <pubDate>Fri, 24 Feb 2023 12:16:19 +0100</pubDate>
       
       <guid>/tags/large-language-model/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>causality</title>
-      <link>/tags/causality/</link>
-      <pubDate>Wed, 03 Jun 2020 10:00:12 +0200</pubDate>
-      
-      <guid>/tags/causality/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>no math</title>
-      <link>/tags/no-math/</link>
-      <pubDate>Wed, 03 Jun 2020 10:00:12 +0200</pubDate>
-      
-      <guid>/tags/no-math/</guid>
       <description></description>
     </item>
     
@@ -107,6 +116,15 @@
       <pubDate>Fri, 17 Apr 2020 08:51:53 +0200</pubDate>
       
       <guid>/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>no math</title>
+      <link>/tags/no-math/</link>
+      <pubDate>Fri, 17 Apr 2020 08:51:53 +0200</pubDate>
+      
+      <guid>/tags/no-math/</guid>
       <description></description>
     </item>
     
