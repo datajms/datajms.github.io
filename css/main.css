@@ -981,9 +981,17 @@ img {
      font-weight: 900;
      font-size: 1.5em;
 }
+.post > header .title h1:hover {
+     color: #2ebaae;
+     transition: color 0.2s ease;
+}
  .post > header .title h2 {
      font-weight: 900;
      font-size: 1.5em;
+}
+.post > header .title h2:hover {
+     color: #2ebaae;
+     transition: color 0.2s ease;
 }
  .post > header .title > :last-child {
      margin-bottom: 0;
