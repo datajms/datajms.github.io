@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>algorithm on Trusted AI Ideas</title>
+    <title>Algorithm on Trusted AI Ideas</title>
     <link>/tags/algorithm/</link>
-    <description>Recent content in algorithm on Trusted AI Ideas</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Algorithm on Trusted AI Ideas</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 17 Apr 2020 08:51:53 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Simplifying the French Covid-19 patient orientation algorithm</title>
       <link>/post/covid_scoring_system_presentation/</link>
       <pubDate>Fri, 17 Apr 2020 08:51:53 +0200</pubDate>
-      
       <guid>/post/covid_scoring_system_presentation/</guid>
-      <description>Were you aware that there is an official French decision tree to orient patients towards relevant medical services, depending on their Covid-19 related symptoms? I transformed it into a point-based scoring system (100% logically equivalent), so that a patient can compute his/her score by adding simple weights. Using these Covid-19 orientation algorithms, a more general comparative analysis is carried out concerning decision trees and scoring systems.
-If you are in a hurry, go and see the take-away messages!</description>
+      <description>&lt;p&gt;Were you aware that there is an &lt;strong&gt;official French decision tree&lt;/strong&gt; to orient patients towards relevant medical services, depending on their Covid-19 related symptoms?&#xA;I transformed it into a &lt;a href=&#34;/post/covid_scoring_system_presentation/#01_orientation_score&#34;&gt;&lt;strong&gt;point-based scoring system&lt;/strong&gt;&lt;/a&gt; (100% logically equivalent), so that a patient can compute his/her score by adding simple weights.&#xA;Using these Covid-19 orientation algorithms, a more general &lt;strong&gt;comparative analysis&lt;/strong&gt; is carried out concerning decision trees and scoring systems.&lt;/p&gt;&#xA;&lt;p&gt;If you are in a hurry, &lt;a href=&#34;#take_away_message&#34;&gt;go and see the take-away messages&lt;/a&gt;!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

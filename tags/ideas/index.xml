@@ -1,36 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ideas on Trusted AI Ideas</title>
+    <title>Ideas on Trusted AI Ideas</title>
     <link>/tags/ideas/</link>
-    <description>Recent content in ideas on Trusted AI Ideas</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Ideas on Trusted AI Ideas</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Feb 2023 12:16:19 +0100</lastBuildDate>
-    
-	<atom:link href="/tags/ideas/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="/tags/ideas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Exploring ChatGPT guardails: from protected to forgotten countries (Part 1)</title>
       <link>/post/chatgpt_country_guardrails_study/</link>
       <pubDate>Fri, 24 Feb 2023 12:16:19 +0100</pubDate>
-      
       <guid>/post/chatgpt_country_guardrails_study/</guid>
-      <description>OpenAI ChatGPT has built guardrails on limiting the generation of negative content. How do these guardrails behave for countries? Spoiler: there are some gaps and disparities in ChatGPT safety mechanisms. Based on 24100 ChatGPT queries, this blog post is an exploration of ChatGPT responses when prompted to generate negative content about a country.
-If you are in a hurry, go and see the early results.
-1. Context: ChatGPT guardrails and harmful content prevention.</description>
+      <description>&lt;p&gt;&lt;strong&gt;OpenAI ChatGPT has built guardrails&lt;/strong&gt; on limiting the generation of negative content.&#xA;How do these guardrails behave for countries?&#xA;Spoiler: there are some &lt;strong&gt;gaps and disparities&lt;/strong&gt; in ChatGPT safety mechanisms.&#xA;Based on 24100 ChatGPT queries, this blog post is an exploration of ChatGPT responses when prompted to generate negative content about a country.&lt;/p&gt;&#xA;&lt;p&gt;If you are in a hurry, go and see the &lt;a href=&#34;#4-results&#34;&gt;early results&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-context-chatgpt-guardrails-and-harmful-content-prevention&#34;&gt;1. Context: ChatGPT guardrails and harmful content prevention.&lt;/h2&gt;&#xA;&lt;h3 id=&#34;11-openai-principles-and-methodology&#34;&gt;1.1. OpenAI Principles and Methodology&lt;/h3&gt;&#xA;&lt;p&gt;ChatGPT has been developed following a methodology based on Human Feedbacks (RLHF).&#xA;The main goal is preventing the AI-powered assistant to create inflammatory, dangerous, politically-oriented, censorship-heavy content&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&#xA;Defining such choices and thresholds relies on high-level principles, that OpenAI made partially public in a &lt;a href=&#34;https://cdn.openai.com/snapshot-of-chatgpt-model-behavior-guidelines.pdf&#34;&gt;3-page document of Guideline Instructions&lt;/a&gt;&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Do you know the 4 types of additive Variable Importances?</title>
       <link>/post/variable_importance_feature_attribution/</link>
       <pubDate>Sat, 16 May 2020 15:36:11 +0200</pubDate>
-      
       <guid>/post/variable_importance_feature_attribution/</guid>
-      <description>Facing complex models, both computer simulation and machine learning practitioners have pursued similar objectives: to see how results could be broken down and linked to the inputs. Whether it is called Sensitivity Analysis or Variable Importance in the context of explainable AI, some of their methods share an important component: the Shapley values.
-This article presents a structured 2 by 2 matrix to think about Variable Importances in terms of their goals.</description>
+      <description>&lt;p&gt;Facing complex models, both computer simulation and machine learning practitioners have pursued similar objectives: to see how results could be broken down and linked to the inputs.&#xA;Whether it is called &lt;strong&gt;Sensitivity Analysis&lt;/strong&gt; or &lt;strong&gt;Variable Importance&lt;/strong&gt; in the context of explainable AI, some of their methods share an important component: the &lt;strong&gt;Shapley values&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This article presents a structured 2 by 2 matrix to think about Variable Importances in terms of their goals.&#xA;Focused on additive feature attribution methods, the 4 identified quadrants are presented along with their &amp;ldquo;optimal&amp;rdquo; method: SHAP, SHAPLEY EFFECTS, SHAPloss and the very recent SAGE.&#xA;Then, we will look into Shapley values and their properties, which make the 4 methods theoretically optimal.&#xA;Finally, I will share my thoughts on the perspectives concerning Variable Importance methods.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

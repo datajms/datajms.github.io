@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>causality on Data Science &amp; AI Ideas</title>
-    <link>/tags/causality/</link>
-    <description>Recent content in causality on Data Science &amp; AI Ideas</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <title>Causality on Trusted AI Ideas</title>
+    <link>//localhost:1313/tags/causality/</link>
+    <description>Recent content in Causality on Trusted AI Ideas</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 03 Jun 2020 10:00:12 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/causality/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="//localhost:1313/tags/causality/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Death sentences and race-ethnicity</title>
-      <link>/post/fairness_justice_death_sentence/</link>
+      <link>//localhost:1313/post/fairness_justice_death_sentence/</link>
       <pubDate>Wed, 03 Jun 2020 10:00:12 +0200</pubDate>
-      
-      <guid>/post/fairness_justice_death_sentence/</guid>
-      <description>This post will present and explain a situation where Black Lives Mattered less. In Oklahoma, from 1990 to 2012, 143 offenders were sentenced to death. In 2017, Pierce et al.1 collected and analyzed the homicide data (4668 offenders) and the death sentences. It shows that there are several race/ethnicity effects involved in the death sentences outcomes. The paper contains all details. Terminology used (&amp;ldquo;nonwhite&amp;rdquo;, &amp;ldquo;race&amp;rdquo;) comes from the paper. I don&amp;rsquo;t like the &amp;ldquo;nonwhite&amp;rdquo; term, but I cannot easily replace it each time with Black, Hispanic, Native American and Asian.</description>
+      <guid>//localhost:1313/post/fairness_justice_death_sentence/</guid>
+      <description>&lt;p&gt;This post will present and explain a situation where &lt;strong&gt;Black Lives Mattered less&lt;/strong&gt;.&#xA;In Oklahoma, from 1990 to 2012, 143 offenders were sentenced to death.&#xA;In 2017, Pierce et al.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; collected and analyzed the homicide data (4668 offenders) and the death sentences.&#xA;It shows that there are several race/ethnicity effects involved in the death sentences outcomes.&#xA;The &lt;a href=&#34;https://scholarlycommons.law.northwestern.edu/cgi/viewcontent.cgi?article=7615&amp;amp;context=jclc&#34;&gt;paper&lt;/a&gt; contains all details.&#xA;Terminology used (&amp;ldquo;nonwhite&amp;rdquo;, &amp;ldquo;race&amp;rdquo;) comes from the paper.&#xA;I don&amp;rsquo;t like the &amp;ldquo;nonwhite&amp;rdquo; term, but I cannot easily replace it each time with Black, Hispanic, Native American and Asian.&#xA;I will stick to it in this post.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>with code on Trusted AI Ideas</title>
+    <title>With Code on Trusted AI Ideas</title>
     <link>/tags/with-code/</link>
-    <description>Recent content in with code on Trusted AI Ideas</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in With Code on Trusted AI Ideas</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 May 2020 15:15:56 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/with-code/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="/tags/with-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Breaking down factors of Covid-19 orientation algorithm by importance</title>
       <link>/post/covid_variable_importances_shapley/</link>
       <pubDate>Fri, 01 May 2020 15:15:56 +0200</pubDate>
-      
       <guid>/post/covid_variable_importances_shapley/</guid>
-      <description>Let&amp;rsquo;s dig deeper on the important factors of the French Covid-19 patient orientation algorithm! The short answer is fever, diarrhea and number of risk factors, but the real answer is that your target population matters a lot.
-Follow me on this journey with 3 variable importance methods and get some insights about how factors interact.
-If you are in a hurry, go and see the take-away messages or have a look at the python code.</description>
+      <description>&lt;p&gt;Let&amp;rsquo;s &lt;img style=&#34;float: left;&#34; src=&#34;/img/post/covid_variable_importances_shapley/large_piechart.png&#34; width=&#34;120&#34;&gt; dig deeper on the &lt;strong&gt;important factors&lt;/strong&gt; of the French Covid-19 patient orientation algorithm!&#xA;The short answer is &lt;strong&gt;fever&lt;/strong&gt;, &lt;strong&gt;diarrhea&lt;/strong&gt; and number of &lt;strong&gt;risk factors&lt;/strong&gt;, but the real answer is that your target population matters a lot.&lt;br&gt;&#xA;Follow me on this journey with &lt;strong&gt;3 variable importance methods&lt;/strong&gt; and get some insights about how factors interact.&lt;/p&gt;&#xA;&lt;p&gt;If you are in a hurry, &lt;a href=&#34;#take_away_message&#34;&gt;go and see the take-away messages&lt;/a&gt; or have a look at the &lt;a href=&#34;https://github.com/datajms/COVID19_attribution&#34;&gt;python code&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

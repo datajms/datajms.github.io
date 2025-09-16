@@ -2442,3 +2442,31 @@ img {
      letter-spacing: 0.25em;
      text-transform: uppercase;
 }
+
+/* Custom styling for post tags */
+.post > header .meta .tags {
+    margin-top: 1em;
+}
+
+.post > header .meta .tag {
+    display: inline-block;
+    background: rgba(160, 160, 160, 0.1);
+    border: 1px solid rgba(160, 160, 160, 0.3);
+    border-radius: 3px;
+    color: #3c3b3b;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-size: 0.6em;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    margin: 0.2em 0.3em 0.2em 0;
+    padding: 0.3em 0.6em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.post > header .meta .tag:hover {
+    background: rgba(160, 160, 160, 0.2);
+    border-color: rgba(160, 160, 160, 0.5);
+    color: #2c2c2c;
+}

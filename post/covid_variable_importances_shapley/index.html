@@ -2,32 +2,35 @@
 
 <html>
     <head>
-        <script type="application/ld+json">
-    {
-        "@context" : "http://schema.org",
-        "@type" : "BlogPosting",
-        "mainEntityOfPage": {
-             "@type": "WebPage",
-             "@id": "\/"
-        },
-        "articleSection" : "post",
-        "name" : "Breaking down factors of Covid-19 orientation algorithm by importance",
-        "headline" : "Breaking down factors of Covid-19 orientation algorithm by importance",
-        "description" : "Computing variable importances: Sobol Indices, Shapley Effects and Shap",
-        "inLanguage" : "en",
-        "author" : "",
-        "creator" : "",
-        "publisher": "",
-        "accountablePerson" : "",
-        "copyrightHolder" : "",
-        "copyrightYear" : "2020",
-        "datePublished": "2020-05-01 15:15:56 \x2b0200 CEST",
-        "dateModified" : "2020-05-01 15:15:56 \x2b0200 CEST",
-        "url" : "\/post\/covid_variable_importances_shapley\/",
-        "wordCount" : "3090",
-        "keywords" : [ "Covid-19","feature importance","XAI","with code","Blog" ]
+        
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Breaking down factors of Covid-19 orientation algorithm by importance",
+  "author": {
+    "@type": "Person",
+    "name": "Jean-Matthieu Schertzer"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Trusted AI Ideas",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/datajms.com\/img/main/JM01_small2.png"
     }
-    </script>
+  },
+  "datePublished": "2020-05-01T15:15:56\u002b02:00",
+  "dateModified": "2020-05-01T15:15:56\u002b02:00",
+  "description": "Computing variable importances: Sobol Indices, Shapley Effects and Shap",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "\/post\/covid_variable_importances_shapley\/"
+  }
+}
+</script>
+
+
         
             
                 <title>Breaking down factors of Covid-19 orientation algorithm by importance</title>
@@ -36,23 +39,17 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.150.0">
         
-  
-    
-    
-  
-
-  
-
-  <link rel="apple-touch-icon-precomposed" href='/favicon/apple-touch-icon-precomposed-32x32.png'>
-  <link rel="icon" href='/favicon/favicon-32x32.png'>
-  
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content='/favicon/mstile-32x32.png'>
-  <meta name="application-name" content="Trusted AI Ideas">
-  <meta name="msapplication-tooltip" content="Trusted AI Ideas: For a trusted use of AI and data science">
-  <meta name="msapplication-config" content='/favicon/ieconfig.xml'>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 
 
 
@@ -63,32 +60,36 @@
             <meta name="description" content="Computing variable importances: Sobol Indices, Shapley Effects and Shap">
         
 
-        <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Breaking down factors of Covid-19 orientation algorithm by importance"/>
-<meta name="twitter:description" content="Computing variable importances: Sobol Indices, Shapley Effects and Shap"/>
-<meta name="twitter:site" content="@datajms"/>
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Breaking down factors of Covid-19 orientation algorithm by importance">
+  <meta name="twitter:description" content="Computing variable importances: Sobol Indices, Shapley Effects and Shap">
 
-        <meta property="og:title" content="Breaking down factors of Covid-19 orientation algorithm by importance" />
-<meta property="og:description" content="Computing variable importances: Sobol Indices, Shapley Effects and Shap" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/post/covid_variable_importances_shapley/" />
-<meta property="article:published_time" content="2020-05-01T15:15:56+02:00" />
-<meta property="article:modified_time" content="2020-05-01T15:15:56+02:00" />
+        <meta property="og:url" content="/post/covid_variable_importances_shapley/">
+  <meta property="og:site_name" content="Trusted AI Ideas">
+  <meta property="og:title" content="Breaking down factors of Covid-19 orientation algorithm by importance">
+  <meta property="og:description" content="Computing variable importances: Sobol Indices, Shapley Effects and Shap">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2020-05-01T15:15:56+02:00">
+    <meta property="article:modified_time" content="2020-05-01T15:15:56+02:00">
+    <meta property="article:tag" content="Covid-19">
+    <meta property="article:tag" content="Feature Importance">
+    <meta property="article:tag" content="XAI">
+    <meta property="article:tag" content="With Code">
 
         <meta property="og:image" content="https://datajms.com/img/post/covid_variable_importances_shapley/thumbnail.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
-        <meta itemprop="name" content="Breaking down factors of Covid-19 orientation algorithm by importance">
-<meta itemprop="description" content="Computing variable importances: Sobol Indices, Shapley Effects and Shap">
-<meta itemprop="datePublished" content="2020-05-01T15:15:56&#43;02:00" />
-<meta itemprop="dateModified" content="2020-05-01T15:15:56&#43;02:00" />
-<meta itemprop="wordCount" content="3090">
-
-
-
-<meta itemprop="keywords" content="Covid-19,feature importance,XAI,with code," />
         
+  <meta itemprop="name" content="Breaking down factors of Covid-19 orientation algorithm by importance">
+  <meta itemprop="description" content="Computing variable importances: Sobol Indices, Shapley Effects and Shap">
+  <meta itemprop="datePublished" content="2020-05-01T15:15:56+02:00">
+  <meta itemprop="dateModified" content="2020-05-01T15:15:56+02:00">
+  <meta itemprop="wordCount" content="3037">
+  <meta itemprop="keywords" content="Covid-19,Feature Importance,XAI,With Code">
 
         
             
@@ -116,29 +117,6 @@
 
       
         
-<script type="application/javascript">
-var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-var doNotTrack = (dnt == "1" || dnt == "yes");
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	if (window.sessionStorage) {
-		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
-		ga('create', 'UA-162779469-1', {
-	    'storage': 'none',
-	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
-	   });
-	   ga(function(tracker) {
-	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
-	   });
-   }
-	
-	ga('send', 'pageview');
-}
-</script>
-
       
     </head>
     <body>
@@ -261,31 +239,6 @@ if (!doNotTrack) {
                                     June 14, 2023</time>
                             </header>
                             
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="/post/sme_startup_eu_ai_act/" class="image featured">
-            <img src="/img/post/sme_startup_eu_ai_act//thumbnail.png" alt="">
-        </a>
-    
-
-
                         </article>
                 
                         <article class="mini-post">
@@ -297,7 +250,6 @@ if (!doNotTrack) {
                                     June 14, 2023</time>
                             </header>
                             
-
                         </article>
                 
                         <article class="mini-post">
@@ -309,31 +261,6 @@ if (!doNotTrack) {
                                     February 24, 2023</time>
                             </header>
                             
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="/post/chatgpt_country_guardrails_study/" class="image featured">
-            <img src="/img/post/chatgpt_country_poem//thumbnail.png" alt="">
-        </a>
-    
-
-
                         </article>
                 
 
@@ -351,37 +278,32 @@ if (!doNotTrack) {
         
 </section>
 
-    <section id="share-menu">
-    <section id="social-share-nav">
-        <ul class="links">
-            <header>
-                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
-            </header>
-            
+    
+<div class="share-menu">
+  <ul class="share-buttons">
+    <li>
+      <a href="https://twitter.com/intent/tweet?url=%2fpost%2fcovid_variable_importances_shapley%2f&text=Breaking%20down%20factors%20of%20Covid-19%20orientation%20algorithm%20by%20importance" target="_blank" rel="noopener" aria-label="Share on Twitter">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fcovid_variable_importances_shapley%2f" target="_blank" rel="noopener" aria-label="Share on Facebook">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=%2fpost%2fcovid_variable_importances_shapley%2f" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:?subject=Breaking%20down%20factors%20of%20Covid-19%20orientation%20algorithm%20by%20importance&body=%2fpost%2fcovid_variable_importances_shapley%2f" aria-label="Share via Email">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
 
-
-
-<li>
-  <a href="//twitter.com/share?url=https%3A//datajms.com%2fpost%2fcovid_variable_importances_shapley%2f&amp;via=datajms&amp;text=Breaking%20down%20factors%20of%20Covid-19%20orientation%20algorithm%20by%20importance" target="_blank" class="share-btn twitter">
-    <i class="fa fa-twitter"></i>
-    <p>Twitter</p>
-    </a>
-</li>
-
-
-
-
-<li>
-  <a href="//www.linkedin.com/shareArticle?url=https%3A//datajms.com%2fpost%2fcovid_variable_importances_shapley%2f&amp;title=Breaking%20down%20factors%20of%20Covid-19%20orientation%20algorithm%20by%20importance" target="_blank" class="share-btn linkedin">
-      <i class="fa fa-linkedin"></i>
-      <p>LinkedIn</p>
-    </a>
-</li>
-
-
-        </ul>
-    </section>
-</section>
 
     
     <div id="main">
@@ -390,28 +312,36 @@ if (!doNotTrack) {
         <article class="post">
   <header>
     <div class="title">
-        
-            <h1><a href="/post/covid_variable_importances_shapley/">Breaking down factors of Covid-19 orientation algorithm by importance</a></h1>
-            
-        
-        
-            <p>Computing variable importances: Sobol Indices, Shapley Effects and Shap</p>
-        
+      <h1>Breaking down factors of Covid-19 orientation algorithm by importance</h1>
+      
+        <p>Computing variable importances: Sobol Indices, Shapley Effects and Shap</p>
+      
     </div>
     <div class="meta">
-        
-
-        <time class="published"
-            datetime='2020-05-01'>
-            May 1, 2020</time>
+      <time class="published" datetime="2020-05-01T15:15:56&#43;02:00">
+        May 1, 2020
+      </time>
+      
         <span class="author">Jean-Matthieu Schertzer</span>
-        
-            <p>15 minute read</p>
-        
-        
+      
+      
+        <span class="published">15 min read</span>
+      
+      
+        <div class="tags">
+          
+            <a href="/tags/covid-19" class="tag">Covid-19</a>
+          
+            <a href="/tags/feature-importance" class="tag">feature importance</a>
+          
+            <a href="/tags/xai" class="tag">XAI</a>
+          
+            <a href="/tags/with-code" class="tag">with code</a>
+          
+        </div>
+      
     </div>
-</header>
-
+  </header>
 
   
     <section id="social-share">
@@ -421,7 +351,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//twitter.com/share?url=https%3A//datajms.com%2fpost%2fcovid_variable_importances_shapley%2f&amp;via=datajms&amp;text=Breaking%20down%20factors%20of%20Covid-19%20orientation%20algorithm%20by%20importance" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=https%3A//datajms.com%2fpost%2fcovid_variable_importances_shapley%2f&amp;via=&amp;text=Breaking%20down%20factors%20of%20Covid-19%20orientation%20algorithm%20by%20importance" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -711,63 +641,63 @@ Both variable importances would be rigorous, but appropriate to different uses.<
 </ul>
 <br>
 <p>Thank you <a href="https://www.linkedin.com/in/nicolas-bousquet-1bb0502/">Nicolas Bousquet</a> for having made me more aware of the sensitivity analysis techniques and their relevance for data science.</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
-<p>Iooss, B. and Lemaître, P., 2015. A review on global sensitivity analysis methods. In Uncertainty management in simulation-optimization of complex systems (pp. 101-122). Springer, Boston, MA. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:1">
+<p>Iooss, B. and Lemaître, P., 2015. A review on global sensitivity analysis methods. In Uncertainty management in simulation-optimization of complex systems (pp. 101-122). Springer, Boston, MA.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
+<li id="fn:2">
 <p>Sobol, I.M., 1993. Sensitivity estimates for nonlinear mathematical models. Mathematical modelling and computational experiments, 1(4), pp.407-414.
-Incidentally, the only online version I found is a <a href="http://www.andreasaltelli.eu/file/repository/sobol1993.pdf">photocopy, annotated by hand</a> by I. M. Sobol himself, sent to Andrea Saltelli, a well known researcher in Sensitivity Analysis. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+Incidentally, the only online version I found is a <a href="http://www.andreasaltelli.eu/file/repository/sobol1993.pdf">photocopy, annotated by hand</a> by I. M. Sobol himself, sent to Andrea Saltelli, a well known researcher in Sensitivity Analysis.&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
+<li id="fn:3">
 <p>The decision function (algorithm) is adapted to enforce the scenario probabilities, by using a Heaviside step function (constant at 0 and then switch to 1) at point 0.5 for scenario B, to simulate the binary behaviour of each factor.
 For scenario A, we use customized threshold points (0.5 for age, 0.8 for the rest of factors).
 Therefore, the Sobol variances computations are done according to our scenarios distributions.
-It is a valid modelling because <em>sobol.analyze</em> doesn&rsquo;t use estimates based on derivatives (as <a href="https://salib.readthedocs.io/en/latest/_modules/SALib/analyze/morris.html">Morris method</a> would do). <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+It is a valid modelling because <em>sobol.analyze</em> doesn&rsquo;t use estimates based on derivatives (as <a href="https://salib.readthedocs.io/en/latest/_modules/SALib/analyze/morris.html">Morris method</a> would do).&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:4" role="doc-endnote">
-<p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.377.6450&amp;rep=rep1&amp;type=pdf">Owen, A.B., 2014. Sobol indices and Shapley value. SIAM/ASA Journal on Uncertainty Quantification, 2(1), pp.245-251.</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:4">
+<p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.377.6450&amp;rep=rep1&amp;type=pdf">Owen, A.B., 2014. Sobol indices and Shapley value. SIAM/ASA Journal on Uncertainty Quantification, 2(1), pp.245-251.</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:5" role="doc-endnote">
-<p><a href="https://pdfs.semanticscholar.org/6a25/48b159bc3bf6c74e13b74a037917951d75ca.pdf">Song, E., Nelson, B.L. and Staum, J., 2016. Shapley effects for global sensitivity analysis: Theory and computation. SIAM/ASA Journal on Uncertainty Quantification, 4(1), pp.1060-1083.</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:5">
+<p><a href="https://pdfs.semanticscholar.org/6a25/48b159bc3bf6c74e13b74a037917951d75ca.pdf">Song, E., Nelson, B.L. and Staum, J., 2016. Shapley effects for global sensitivity analysis: Theory and computation. SIAM/ASA Journal on Uncertainty Quantification, 4(1), pp.1060-1083.</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:6" role="doc-endnote">
-<p><a href="https://hal.inria.fr/hal-01556303v3/document">Iooss, B. and Prieur, C., 2017. Shapley effects for sensitivity analysis with dependent inputs: comparisons with Sobol indices, numerical estimation and applications. arXiv preprint arXiv:1707.01334.</a> <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:6">
+<p><a href="https://hal.inria.fr/hal-01556303v3/document">Iooss, B. and Prieur, C., 2017. Shapley effects for sensitivity analysis with dependent inputs: comparisons with Sobol indices, numerical estimation and applications. arXiv preprint arXiv:1707.01334.</a>&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:7" role="doc-endnote">
-<p><a href="https://www.esaim-proc.org/articles/proc/pdf/2019/01/proc196511.pdf">Benoumechiara, N. and Elie-Dit-Cosaque, K., 2019. Shapley effects for sensitivity analysis with dependent inputs: bootstrap and kriging-based algorithms. ESAIM: Proceedings and Surveys, 65, pp.266-293.</a> <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:7">
+<p><a href="https://www.esaim-proc.org/articles/proc/pdf/2019/01/proc196511.pdf">Benoumechiara, N. and Elie-Dit-Cosaque, K., 2019. Shapley effects for sensitivity analysis with dependent inputs: bootstrap and kriging-based algorithms. ESAIM: Proceedings and Surveys, 65, pp.266-293.</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:8" role="doc-endnote">
-<p>The core functions are <em>build_sample</em> and <em>compute_indices</em>, from class <a href="https://gitlab.com/CEMRACS17/shapley-effects/-/blob/master/shapley/shapley.py"><em>ShapleyIndices</em></a>. <a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:8">
+<p>The core functions are <em>build_sample</em> and <em>compute_indices</em>, from class <a href="https://gitlab.com/CEMRACS17/shapley-effects/-/blob/master/shapley/shapley.py"><em>ShapleyIndices</em></a>.&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:9" role="doc-endnote">
-<p><a href="http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf">Lundberg, S.M. and Lee, S.I., 2017. A unified approach to interpreting model predictions. In Advances in neural information processing systems (pp. 4765-4774).</a> <a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:9">
+<p><a href="http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf">Lundberg, S.M. and Lee, S.I., 2017. A unified approach to interpreting model predictions. In Advances in neural information processing systems (pp. 4765-4774).</a>&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:10" role="doc-endnote">
-<p>Averaging absolute values of shap values is implemented in the shap library (summary plot) and mentioned by Molnar in his 2019 interpretable machine learning <a href="https://christophm.github.io/interpretable-ml-book/shap.html#shap-feature-importance">book</a>. <a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:10">
+<p>Averaging absolute values of shap values is implemented in the shap library (summary plot) and mentioned by Molnar in his 2019 interpretable machine learning <a href="https://christophm.github.io/interpretable-ml-book/shap.html#shap-feature-importance">book</a>.&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:11" role="doc-endnote">
-<p>Note that we could have used the fast TreeShap method, by training a scikit-learn decision tree to perfectly learn our Covid-19 orientation algorithm and use TreeShap on it. <a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:11">
+<p>Note that we could have used the fast TreeShap method, by training a scikit-learn decision tree to perfectly learn our Covid-19 orientation algorithm and use TreeShap on it.&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:12" role="doc-endnote">
-<p>The 3 scripts to run the computations are <a href="https://github.com/datajms/COVID19_attribution/blob/master/experiments/run_sobol.py"><em>run_sobol.py</em></a>, <a href="https://github.com/datajms/COVID19_attribution/blob/master/experiments/run_shapley_effects.py"><em>run_shapley_effects.py</em></a> and <a href="https://github.com/datajms/COVID19_attribution/blob/master/experiments/run_kernelshap.py"><em>run_kernelshap.py</em></a>. <a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:12">
+<p>The 3 scripts to run the computations are <a href="https://github.com/datajms/COVID19_attribution/blob/master/experiments/run_sobol.py"><em>run_sobol.py</em></a>, <a href="https://github.com/datajms/COVID19_attribution/blob/master/experiments/run_shapley_effects.py"><em>run_shapley_effects.py</em></a> and <a href="https://github.com/datajms/COVID19_attribution/blob/master/experiments/run_kernelshap.py"><em>run_kernelshap.py</em></a>.&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:13" role="doc-endnote">
-<p>Note that there are no theoretical reasons for these different importances to converge together if we increase the number of simulation: these are 3 different methods. <a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:13">
+<p>Note that there are no theoretical reasons for these different importances to converge together if we increase the number of simulation: these are 3 different methods.&#160;<a href="#fnref:13" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:14" role="doc-endnote">
-<p>shap Importances are less extreme, this is likely to be due to the absolute value used for aggregating all local shap values; but no guarantee! <a href="#fnref:14" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:14">
+<p>shap Importances are less extreme, this is likely to be due to the absolute value used for aggregating all local shap values; but no guarantee!&#160;<a href="#fnref:14" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:15" role="doc-endnote">
+<li id="fn:15">
 <p>In scenario A, if we are on top of center branch, probability of having a tele-consultation recommended is 68%; if placed on top of the right branch, probability of tele-consultation is 9.76%.
 In scenario B, the gap is smaller for the same indicators (87.5% vs 43.75%).
 So in A, the center vs right branch switch has an outcome gap of ~60 pts of probability whereas in B it is &ldquo;only&rdquo; ~45 pts.
-Therefore, in scenario A, the center vs right branch switch matters more, in terms of determining the outcome. <a href="#fnref:15" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+Therefore, in scenario A, the center vs right branch switch matters more, in terms of determining the outcome.&#160;<a href="#fnref:15" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
         </div>
 
@@ -835,76 +765,11 @@ function clearActiveStatesInTableOfContents() {
   
 
   <footer>
-    <ul class="stats">
-  <li class="categories">
-    <ul>
-        
-    </ul>
-  </li>
-  <li class="tags">
-    <ul>
-        
-            
-            
-                <i class="fa fa-tags"></i>
-                
-                
-                <li><a class="article-category-link" href="/tags/covid-19">Covid-19</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/feature-importance">feature importance</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/xai">XAI</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/with-code">with code</a></li>
-                
-            
-        
-    </ul>
-  </li>
-</ul>
-
+    
   </footer>
 
 </article>
 
-    <article class="post">
-        <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "datajms-com" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </article>
-
-
-<ul class="actions pagination">
-    
-        <li><a href="/post/covid_scoring_system_presentation/"
-                class="button big previous">Simplifying the French Covid-19 patient orientation algorithm</a></li>
-    
-
-    
-        <li><a href="/post/variable_importance_feature_attribution/"
-                class="button big next">Do you know the 4 types of additive Variable Importances?</a></li>
-    
-</ul>
 
 
     </div>
@@ -943,11 +808,7 @@ function clearActiveStatesInTableOfContents() {
 
     
     <script>hljs.initHighlightingOnLoad();</script>
-      <script src="//yihui.name/js/math-code.js"></script>
-<script async
-src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
+      
 
   </body>
 </html>

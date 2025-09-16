@@ -1,46 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>feature importance on Trusted AI Ideas</title>
+    <title>Feature Importance on Trusted AI Ideas</title>
     <link>/tags/feature-importance/</link>
-    <description>Recent content in feature importance on Trusted AI Ideas</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Feature Importance on Trusted AI Ideas</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 16 May 2020 15:36:11 +0200</lastBuildDate>
-    
-	<atom:link href="/tags/feature-importance/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="/tags/feature-importance/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Do you know the 4 types of additive Variable Importances?</title>
       <link>/post/variable_importance_feature_attribution/</link>
       <pubDate>Sat, 16 May 2020 15:36:11 +0200</pubDate>
-      
       <guid>/post/variable_importance_feature_attribution/</guid>
-      <description>Facing complex models, both computer simulation and machine learning practitioners have pursued similar objectives: to see how results could be broken down and linked to the inputs. Whether it is called Sensitivity Analysis or Variable Importance in the context of explainable AI, some of their methods share an important component: the Shapley values.
-This article presents a structured 2 by 2 matrix to think about Variable Importances in terms of their goals.</description>
+      <description>&lt;p&gt;Facing complex models, both computer simulation and machine learning practitioners have pursued similar objectives: to see how results could be broken down and linked to the inputs.&#xA;Whether it is called &lt;strong&gt;Sensitivity Analysis&lt;/strong&gt; or &lt;strong&gt;Variable Importance&lt;/strong&gt; in the context of explainable AI, some of their methods share an important component: the &lt;strong&gt;Shapley values&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;This article presents a structured 2 by 2 matrix to think about Variable Importances in terms of their goals.&#xA;Focused on additive feature attribution methods, the 4 identified quadrants are presented along with their &amp;ldquo;optimal&amp;rdquo; method: SHAP, SHAPLEY EFFECTS, SHAPloss and the very recent SAGE.&#xA;Then, we will look into Shapley values and their properties, which make the 4 methods theoretically optimal.&#xA;Finally, I will share my thoughts on the perspectives concerning Variable Importance methods.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Breaking down factors of Covid-19 orientation algorithm by importance</title>
       <link>/post/covid_variable_importances_shapley/</link>
       <pubDate>Fri, 01 May 2020 15:15:56 +0200</pubDate>
-      
       <guid>/post/covid_variable_importances_shapley/</guid>
-      <description>Let&amp;rsquo;s dig deeper on the important factors of the French Covid-19 patient orientation algorithm! The short answer is fever, diarrhea and number of risk factors, but the real answer is that your target population matters a lot.
-Follow me on this journey with 3 variable importance methods and get some insights about how factors interact.
-If you are in a hurry, go and see the take-away messages or have a look at the python code.</description>
+      <description>&lt;p&gt;Let&amp;rsquo;s &lt;img style=&#34;float: left;&#34; src=&#34;/img/post/covid_variable_importances_shapley/large_piechart.png&#34; width=&#34;120&#34;&gt; dig deeper on the &lt;strong&gt;important factors&lt;/strong&gt; of the French Covid-19 patient orientation algorithm!&#xA;The short answer is &lt;strong&gt;fever&lt;/strong&gt;, &lt;strong&gt;diarrhea&lt;/strong&gt; and number of &lt;strong&gt;risk factors&lt;/strong&gt;, but the real answer is that your target population matters a lot.&lt;br&gt;&#xA;Follow me on this journey with &lt;strong&gt;3 variable importance methods&lt;/strong&gt; and get some insights about how factors interact.&lt;/p&gt;&#xA;&lt;p&gt;If you are in a hurry, &lt;a href=&#34;#take_away_message&#34;&gt;go and see the take-away messages&lt;/a&gt; or have a look at the &lt;a href=&#34;https://github.com/datajms/COVID19_attribution&#34;&gt;python code&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Simplifying the French Covid-19 patient orientation algorithm</title>
       <link>/post/covid_scoring_system_presentation/</link>
       <pubDate>Fri, 17 Apr 2020 08:51:53 +0200</pubDate>
-      
       <guid>/post/covid_scoring_system_presentation/</guid>
-      <description>Were you aware that there is an official French decision tree to orient patients towards relevant medical services, depending on their Covid-19 related symptoms? I transformed it into a point-based scoring system (100% logically equivalent), so that a patient can compute his/her score by adding simple weights. Using these Covid-19 orientation algorithms, a more general comparative analysis is carried out concerning decision trees and scoring systems.
-If you are in a hurry, go and see the take-away messages!</description>
+      <description>&lt;p&gt;Were you aware that there is an &lt;strong&gt;official French decision tree&lt;/strong&gt; to orient patients towards relevant medical services, depending on their Covid-19 related symptoms?&#xA;I transformed it into a &lt;a href=&#34;/post/covid_scoring_system_presentation/#01_orientation_score&#34;&gt;&lt;strong&gt;point-based scoring system&lt;/strong&gt;&lt;/a&gt; (100% logically equivalent), so that a patient can compute his/her score by adding simple weights.&#xA;Using these Covid-19 orientation algorithms, a more general &lt;strong&gt;comparative analysis&lt;/strong&gt; is carried out concerning decision trees and scoring systems.&lt;/p&gt;&#xA;&lt;p&gt;If you are in a hurry, &lt;a href=&#34;#take_away_message&#34;&gt;go and see the take-away messages&lt;/a&gt;!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

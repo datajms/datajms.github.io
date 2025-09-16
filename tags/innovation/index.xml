@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>innovation on Trusted AI Ideas</title>
+    <title>Innovation on Trusted AI Ideas</title>
     <link>/tags/innovation/</link>
-    <description>Recent content in innovation on Trusted AI Ideas</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Innovation on Trusted AI Ideas</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 14 Jun 2023 12:16:19 +0100</lastBuildDate>
-    
-	<atom:link href="/tags/innovation/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="/tags/innovation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>EU AI Act explicitly mentions SMEs and start-ups, but how?</title>
       <link>/post/sme_startup_eu_ai_act/</link>
       <pubDate>Wed, 14 Jun 2023 12:16:19 +0100</pubDate>
-      
       <guid>/post/sme_startup_eu_ai_act/</guid>
-      <description>European Union is on the verge of adopting a horizontal Regulation on Artificial Intelligence (AI Act). Specific mentions of SMEs and start-ups are included. Let&amp;rsquo;s analyze them.
-Here is the breakdown of the 30 explicit mentions, and their goals, of SMEs and start-ups in the AI Act Proposal:
- to smoothen some Provider and Deployer obligations (#12 mentions), to possibly reduce penalties when infringement occurs (#2), to facilitate access (process and price) to compliance processes (#7), to include them more as stakeholder in EU Governance (#4) and to affirm a will to support their innovation.</description>
+      <description>&lt;p&gt;&lt;strong&gt;European Union&lt;/strong&gt; is on the verge of adopting a horizontal Regulation on Artificial Intelligence (AI Act).&#xA;Specific mentions of SMEs and start-ups are included.&#xA;Let&amp;rsquo;s analyze them.&lt;/p&gt;&#xA;&lt;p&gt;Here is the breakdown of the 30 explicit mentions, and their goals, of SMEs and start-ups in the AI Act Proposal:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;to &lt;strong&gt;smoothen&lt;/strong&gt; some &lt;strong&gt;Provider and Deployer obligations&lt;/strong&gt; (#12 mentions),&lt;/li&gt;&#xA;&lt;li&gt;to possibly &lt;strong&gt;reduce penalties&lt;/strong&gt; when infringement occurs (#2),&lt;/li&gt;&#xA;&lt;li&gt;to &lt;strong&gt;facilitate access&lt;/strong&gt; (process and price) to &lt;strong&gt;compliance processes&lt;/strong&gt; (#7),&lt;/li&gt;&#xA;&lt;li&gt;to include them more as stakeholder in &lt;strong&gt;EU Governance&lt;/strong&gt; (#4) and&lt;/li&gt;&#xA;&lt;li&gt;to &lt;strong&gt;affirm a will&lt;/strong&gt; to support their innovation. (#5)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;br&gt;&#xA;&lt;h2 id=&#34;1-objectives-and-context&#34;&gt;1. Objectives and context&lt;/h2&gt;&#xA;&lt;p&gt;This post is not a general summary and analysis on the AI Act, but focuses on an important point of discussion, at the core of the &lt;strong&gt;Innovation vs Regulation debate&lt;/strong&gt;.&#xA;We will focus on &lt;strong&gt;Small and Medium Enterprises (SMEs) and Start-ups&lt;/strong&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

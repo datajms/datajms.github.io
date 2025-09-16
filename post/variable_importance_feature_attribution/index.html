@@ -2,32 +2,35 @@
 
 <html>
     <head>
-        <script type="application/ld+json">
-    {
-        "@context" : "http://schema.org",
-        "@type" : "BlogPosting",
-        "mainEntityOfPage": {
-             "@type": "WebPage",
-             "@id": "\/"
-        },
-        "articleSection" : "post",
-        "name" : "Do you know the 4 types of additive Variable Importances?",
-        "headline" : "Do you know the 4 types of additive Variable Importances?",
-        "description" : "From Sobol indices to SAGE values: different purposes, same optimality",
-        "inLanguage" : "en",
-        "author" : "",
-        "creator" : "",
-        "publisher": "",
-        "accountablePerson" : "",
-        "copyrightHolder" : "",
-        "copyrightYear" : "2020",
-        "datePublished": "2020-05-16 15:36:11 \x2b0200 CEST",
-        "dateModified" : "2020-05-16 15:36:11 \x2b0200 CEST",
-        "url" : "\/post\/variable_importance_feature_attribution\/",
-        "wordCount" : "2556",
-        "keywords" : [ "ideas","feature importance","XAI","some math","Blog" ]
+        
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Do you know the 4 types of additive Variable Importances?",
+  "author": {
+    "@type": "Person",
+    "name": "Jean-Matthieu Schertzer"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Trusted AI Ideas",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/datajms.com\/img/main/JM01_small2.png"
     }
-    </script>
+  },
+  "datePublished": "2020-05-16T15:36:11\u002b02:00",
+  "dateModified": "2020-05-16T15:36:11\u002b02:00",
+  "description": "From Sobol indices to SAGE values: different purposes, same optimality",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "\/post\/variable_importance_feature_attribution\/"
+  }
+}
+</script>
+
+
         
             
                 <title>Do you know the 4 types of additive Variable Importances?</title>
@@ -36,23 +39,17 @@
 
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="generator" content="Hugo 0.68.3" />
+        <meta name="generator" content="Hugo 0.150.0">
         
-  
-    
-    
-  
-
-  
-
-  <link rel="apple-touch-icon-precomposed" href='/favicon/apple-touch-icon-precomposed-32x32.png'>
-  <link rel="icon" href='/favicon/favicon-32x32.png'>
-  
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="msapplication-TileImage" content='/favicon/mstile-32x32.png'>
-  <meta name="application-name" content="Trusted AI Ideas">
-  <meta name="msapplication-tooltip" content="Trusted AI Ideas: For a trusted use of AI and data science">
-  <meta name="msapplication-config" content='/favicon/ieconfig.xml'>
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
+<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 
 
 
@@ -63,32 +60,36 @@
             <meta name="description" content="From Sobol indices to SAGE values: different purposes, same optimality">
         
 
-        <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Do you know the 4 types of additive Variable Importances?"/>
-<meta name="twitter:description" content="From Sobol indices to SAGE values: different purposes, same optimality"/>
-<meta name="twitter:site" content="@datajms"/>
+        
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Do you know the 4 types of additive Variable Importances?">
+  <meta name="twitter:description" content="From Sobol indices to SAGE values: different purposes, same optimality">
 
-        <meta property="og:title" content="Do you know the 4 types of additive Variable Importances?" />
-<meta property="og:description" content="From Sobol indices to SAGE values: different purposes, same optimality" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/post/variable_importance_feature_attribution/" />
-<meta property="article:published_time" content="2020-05-16T15:36:11+02:00" />
-<meta property="article:modified_time" content="2020-05-16T15:36:11+02:00" />
+        <meta property="og:url" content="/post/variable_importance_feature_attribution/">
+  <meta property="og:site_name" content="Trusted AI Ideas">
+  <meta property="og:title" content="Do you know the 4 types of additive Variable Importances?">
+  <meta property="og:description" content="From Sobol indices to SAGE values: different purposes, same optimality">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2020-05-16T15:36:11+02:00">
+    <meta property="article:modified_time" content="2020-05-16T15:36:11+02:00">
+    <meta property="article:tag" content="Ideas">
+    <meta property="article:tag" content="Feature Importance">
+    <meta property="article:tag" content="XAI">
+    <meta property="article:tag" content="Some Math">
 
         <meta property="og:image" content="https://datajms.com/img/post/variable_importance_feature_attribution/thumbnail.png">
         <meta property="og:image:type" content="image/png">
         <meta property="og:image:width" content="512">
         <meta property="og:image:height" content="512">
-        <meta itemprop="name" content="Do you know the 4 types of additive Variable Importances?">
-<meta itemprop="description" content="From Sobol indices to SAGE values: different purposes, same optimality">
-<meta itemprop="datePublished" content="2020-05-16T15:36:11&#43;02:00" />
-<meta itemprop="dateModified" content="2020-05-16T15:36:11&#43;02:00" />
-<meta itemprop="wordCount" content="2556">
-
-
-
-<meta itemprop="keywords" content="ideas,feature importance,XAI,some math," />
         
+  <meta itemprop="name" content="Do you know the 4 types of additive Variable Importances?">
+  <meta itemprop="description" content="From Sobol indices to SAGE values: different purposes, same optimality">
+  <meta itemprop="datePublished" content="2020-05-16T15:36:11+02:00">
+  <meta itemprop="dateModified" content="2020-05-16T15:36:11+02:00">
+  <meta itemprop="wordCount" content="2516">
+  <meta itemprop="keywords" content="Ideas,Feature Importance,XAI,Some Math">
 
         
             
@@ -116,29 +117,6 @@
 
       
         
-<script type="application/javascript">
-var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-var doNotTrack = (dnt == "1" || dnt == "yes");
-if (!doNotTrack) {
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	if (window.sessionStorage) {
-		var GA_SESSION_STORAGE_KEY = 'ga:clientId';
-		ga('create', 'UA-162779469-1', {
-	    'storage': 'none',
-	    'clientId': sessionStorage.getItem(GA_SESSION_STORAGE_KEY)
-	   });
-	   ga(function(tracker) {
-	    sessionStorage.setItem(GA_SESSION_STORAGE_KEY, tracker.get('clientId'));
-	   });
-   }
-	
-	ga('send', 'pageview');
-}
-</script>
-
       
     </head>
     <body>
@@ -261,31 +239,6 @@ if (!doNotTrack) {
                                     June 14, 2023</time>
                             </header>
                             
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="/post/sme_startup_eu_ai_act/" class="image featured">
-            <img src="/img/post/sme_startup_eu_ai_act//thumbnail.png" alt="">
-        </a>
-    
-
-
                         </article>
                 
                         <article class="mini-post">
@@ -297,7 +250,6 @@ if (!doNotTrack) {
                                     June 14, 2023</time>
                             </header>
                             
-
                         </article>
                 
                         <article class="mini-post">
@@ -309,31 +261,6 @@ if (!doNotTrack) {
                                     February 24, 2023</time>
                             </header>
                             
-    
-
-    
-        
-        
-
-
-
-
-
-
-
-  
-
-
-        
-        
-        
-
-        <a href="/post/chatgpt_country_guardrails_study/" class="image featured">
-            <img src="/img/post/chatgpt_country_poem//thumbnail.png" alt="">
-        </a>
-    
-
-
                         </article>
                 
 
@@ -351,37 +278,32 @@ if (!doNotTrack) {
         
 </section>
 
-    <section id="share-menu">
-    <section id="social-share-nav">
-        <ul class="links">
-            <header>
-                <h3>Share this post <i class="fa fa-smile-o"></i></h3>
-            </header>
-            
+    
+<div class="share-menu">
+  <ul class="share-buttons">
+    <li>
+      <a href="https://twitter.com/intent/tweet?url=%2fpost%2fvariable_importance_feature_attribution%2f&text=Do%20you%20know%20the%204%20types%20of%20additive%20Variable%20Importances%3f" target="_blank" rel="noopener" aria-label="Share on Twitter">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=%2fpost%2fvariable_importance_feature_attribution%2f" target="_blank" rel="noopener" aria-label="Share on Facebook">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.linkedin.com/sharing/share-offsite/?url=%2fpost%2fvariable_importance_feature_attribution%2f" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a href="mailto:?subject=Do%20you%20know%20the%204%20types%20of%20additive%20Variable%20Importances%3f&body=%2fpost%2fvariable_importance_feature_attribution%2f" aria-label="Share via Email">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
 
-
-
-<li>
-  <a href="//twitter.com/share?url=https%3A//datajms.com%2fpost%2fvariable_importance_feature_attribution%2f&amp;via=datajms&amp;text=Do%20you%20know%20the%204%20types%20of%20additive%20Variable%20Importances%3f" target="_blank" class="share-btn twitter">
-    <i class="fa fa-twitter"></i>
-    <p>Twitter</p>
-    </a>
-</li>
-
-
-
-
-<li>
-  <a href="//www.linkedin.com/shareArticle?url=https%3A//datajms.com%2fpost%2fvariable_importance_feature_attribution%2f&amp;title=Do%20you%20know%20the%204%20types%20of%20additive%20Variable%20Importances%3f" target="_blank" class="share-btn linkedin">
-      <i class="fa fa-linkedin"></i>
-      <p>LinkedIn</p>
-    </a>
-</li>
-
-
-        </ul>
-    </section>
-</section>
 
     
     <div id="main">
@@ -390,28 +312,36 @@ if (!doNotTrack) {
         <article class="post">
   <header>
     <div class="title">
-        
-            <h1><a href="/post/variable_importance_feature_attribution/">Do you know the 4 types of additive Variable Importances?</a></h1>
-            
-        
-        
-            <p>From Sobol indices to SAGE values: different purposes, same optimality</p>
-        
+      <h1>Do you know the 4 types of additive Variable Importances?</h1>
+      
+        <p>From Sobol indices to SAGE values: different purposes, same optimality</p>
+      
     </div>
     <div class="meta">
-        
-
-        <time class="published"
-            datetime='2020-05-16'>
-            May 16, 2020</time>
+      <time class="published" datetime="2020-05-16T15:36:11&#43;02:00">
+        May 16, 2020
+      </time>
+      
         <span class="author">Jean-Matthieu Schertzer</span>
-        
-            <p>12 minute read</p>
-        
-        
+      
+      
+        <span class="published">12 min read</span>
+      
+      
+        <div class="tags">
+          
+            <a href="/tags/ideas" class="tag">ideas</a>
+          
+            <a href="/tags/feature-importance" class="tag">feature importance</a>
+          
+            <a href="/tags/xai" class="tag">XAI</a>
+          
+            <a href="/tags/some-math" class="tag">some math</a>
+          
+        </div>
+      
     </div>
-</header>
-
+  </header>
 
   
     <section id="social-share">
@@ -421,7 +351,7 @@ if (!doNotTrack) {
 
 
 <li>
-  <a href="//twitter.com/share?url=https%3A//datajms.com%2fpost%2fvariable_importance_feature_attribution%2f&amp;via=datajms&amp;text=Do%20you%20know%20the%204%20types%20of%20additive%20Variable%20Importances%3f" target="_blank" class="share-btn twitter">
+  <a href="//twitter.com/share?url=https%3A//datajms.com%2fpost%2fvariable_importance_feature_attribution%2f&amp;via=&amp;text=Do%20you%20know%20the%204%20types%20of%20additive%20Variable%20Importances%3f" target="_blank" class="share-btn twitter">
     <i class="fa fa-twitter"></i>
     <p>Twitter</p>
     </a>
@@ -567,7 +497,7 @@ Let&rsquo;s introduce <strong>Shapley values</strong> first and see how it appli
 \(Q(u)\) is a function returning the quantity of interest of coalition \(u\).
 A coalition is a set of entity \(i\): there are \(2^d\) possible coalitions, including \(\emptyset\) and \(P_d\).
 Finally, let&rsquo;s denote by \(S_i^d\) the set of all possible coalitions <strong>which do not contain the entity</strong> \(i\).</p>
-<p>The Shapley values \(\phi_i^Q\) are the only quantity weighting which satisfies 5 desirable properties (check §3.1 of SAGE paper<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> for their meaning) named symmetry, linearity, monotonicity, dummy and finally efficiency, which we write here:<br>
+<p>The Shapley values \(\phi_i^Q\) are the only quantity weighting which satisfies 5 desirable properties (check §3.1 of SAGE paper<sup id="fnref1:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> for their meaning) named symmetry, linearity, monotonicity, dummy and finally efficiency, which we write here:<br>
 \(Q(P_d)=Q(\emptyset) + \sum[\phi_i^Q]\)</p>
 <p>There is a lot to talk about concerning the formula of this Shapley values.
 But it is slightly off-topic and I would rather focusing on how this Shapley idea is applied to the 4 quadrants.
@@ -630,52 +560,52 @@ Should it be done with a multiplicative breakdown or with totally different re-w
 </ul>
 <p>Interested in an experiment with results and <a href="https://github.com/datajms/COVID19_attribution">code</a> for SHAP and SHAPLEY EFFECTS zone ?
 You can check my article on <a href="/post/covid_variable_importances_shapley/">Variable importance for the Covid-19 patient orientation algorithm</a>.
-Furthermore, you can check the SAGE paper<sup id="fnref:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> for more examples of non optimal but computationally light methods and how they fit in the 2 by 2 matrix.</p>
+Furthermore, you can check the SAGE paper<sup id="fnref2:7"><a href="#fn:7" class="footnote-ref" role="doc-noteref">7</a></sup> for more examples of non optimal but computationally light methods and how they fit in the 2 by 2 matrix.</p>
 <br>
 <p>Congrats to <a href="https://scottlundberg.com/">Scott Lundberg</a> for having pioneered the way in so many topics and ideas in just a few years!</p>
-<section class="footnotes" role="doc-endnotes">
+<div class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
-<li id="fn:1" role="doc-endnote">
+<li id="fn:1">
 <p>Sobol, I. M. (1993). Sensitivity estimates for nonlinear mathematical models. Mathematical modelling and computational experiments, 1(4), 407-414.
-Incidentally, the only online version I found is a <a href="http://www.andreasaltelli.eu/file/repository/sobol1993.pdf">photocopy, annotated by hand</a> by I. M. Sobol himself, sent to Andrea Saltelli, a well known researcher in Sensitivity Analysis. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+Incidentally, the only online version I found is a <a href="http://www.andreasaltelli.eu/file/repository/sobol1993.pdf">photocopy, annotated by hand</a> by I. M. Sobol himself, sent to Andrea Saltelli, a well known researcher in Sensitivity Analysis.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:2" role="doc-endnote">
-<p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.377.6450&amp;rep=rep1&amp;type=pdf">Owen, A. B. (2014). Sobol&rsquo;indices and Shapley value. SIAM/ASA Journal on Uncertainty Quantification, 2(1), 245-251.</a> <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:2">
+<p><a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.377.6450&amp;rep=rep1&amp;type=pdf">Owen, A. B. (2014). Sobol&rsquo;indices and Shapley value. SIAM/ASA Journal on Uncertainty Quantification, 2(1), 245-251.</a>&#160;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:3" role="doc-endnote">
-<p><a href="https://pdfs.semanticscholar.org/6a25/48b159bc3bf6c74e13b74a037917951d75ca.pdf">Song, E., Nelson, B. L., &amp; Staum, J. (2016). Shapley effects for global sensitivity analysis: Theory and computation. SIAM/ASA Journal on Uncertainty Quantification, 4(1), 1060-1083.</a> <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:3">
+<p><a href="https://pdfs.semanticscholar.org/6a25/48b159bc3bf6c74e13b74a037917951d75ca.pdf">Song, E., Nelson, B. L., &amp; Staum, J. (2016). Shapley effects for global sensitivity analysis: Theory and computation. SIAM/ASA Journal on Uncertainty Quantification, 4(1), 1060-1083.</a>&#160;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:4" role="doc-endnote">
-<p><a href="https://hal.inria.fr/hal-01556303v3/document">Iooss, B., &amp; Prieur, C. (2019). Shapley effects for sensitivity analysis with correlated inputs: comparisons with Sobol&rsquo;indices, numerical estimation and applications. International Journal for Uncertainty Quantification, 9(5).</a> <a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:4">
+<p><a href="https://hal.inria.fr/hal-01556303v3/document">Iooss, B., &amp; Prieur, C. (2019). Shapley effects for sensitivity analysis with correlated inputs: comparisons with Sobol&rsquo;indices, numerical estimation and applications. International Journal for Uncertainty Quantification, 9(5).</a>&#160;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:5" role="doc-endnote">
-<p><a href="http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf">Lundberg, S. M., &amp; Lee, S. I. (2017). A unified approach to interpreting model predictions. In Advances in neural information processing systems (pp. 4765-4774).</a> <a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:5">
+<p><a href="http://papers.nips.cc/paper/7062-a-unified-approach-to-interpreting-model-predictions.pdf">Lundberg, S. M., &amp; Lee, S. I. (2017). A unified approach to interpreting model predictions. In Advances in neural information processing systems (pp. 4765-4774).</a>&#160;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:6" role="doc-endnote">
-<p>Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N., &amp; Lee, S. I., (2020). From local explanations to global understanding with explainable AI for trees. Nature machine intelligence, 2(1), 2522-5839. <a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:6">
+<p>Lundberg, S. M., Erion, G., Chen, H., DeGrave, A., Prutkin, J. M., Nair, B., Katz, R., Himmelfarb, J., Bansal, N., &amp; Lee, S. I., (2020). From local explanations to global understanding with explainable AI for trees. Nature machine intelligence, 2(1), 2522-5839.&#160;<a href="#fnref:6" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:7" role="doc-endnote">
-<p><a href="https://arxiv.org/pdf/2004.00668.pdf">Covert, I., Lundberg, S., &amp; Lee, S. I. (2020). Understanding Global Feature Contributions Through Additive Importance Measures. arXiv preprint arXiv:2004.00668.</a> <a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:7">
+<p><a href="https://arxiv.org/pdf/2004.00668.pdf">Covert, I., Lundberg, S., &amp; Lee, S. I. (2020). Understanding Global Feature Contributions Through Additive Importance Measures. arXiv preprint arXiv:2004.00668.</a>&#160;<a href="#fnref:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref1:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a>&#160;<a href="#fnref2:7" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:8" role="doc-endnote">
-<p><a href="http://www.library.fa.ru/files/Roth2.pdf#page=39">Shapley, L. S. (1953). A value for n-person games. Contributions to the Theory of Games, 2(28), 307-317.</a> <a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:8">
+<p><a href="http://www.library.fa.ru/files/Roth2.pdf#page=39">Shapley, L. S. (1953). A value for n-person games. Contributions to the Theory of Games, 2(28), 307-317.</a>&#160;<a href="#fnref:8" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:9" role="doc-endnote">
-<p>\( \phi_i^Q = \sum_{u \in S_i^d}(\alpha_{|u|} * [Q(u \cup { i}) - Q(u)]) \text{ , where } \alpha_{k} = \frac{1}{d} {\binom{d-1}{k}}^{-1}  \) <a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:9">
+<p>\( \phi_i^Q = \sum_{u \in S_i^d}(\alpha_{|u|} * [Q(u \cup { i}) - Q(u)]) \text{ , where } \alpha_{k} = \frac{1}{d} {\binom{d-1}{k}}^{-1}  \)&#160;<a href="#fnref:9" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:10" role="doc-endnote">
+<li id="fn:10">
 <p>Let&rsquo;s suppose we have 2 features, then there are 4 coalitions to form:
-\(f_\emptyset((x_1, x_2)) = \mathbb{E}(f(X))\), \(f_1(x_1, x_2) = \mathbb{E}(f(X | X_1=x_1))\), \(f_2(x_1, x_2) = \mathbb{E}(f(X | X_2=x_2))\) and \(f_{1,2}(x_1, x_2) = \mathbb{E}(f(X | X_1=x_1, X_2=x_2)) = f(x_1, x_2)\) <a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+\(f_\emptyset((x_1, x_2)) = \mathbb{E}(f(X))\), \(f_1(x_1, x_2) = \mathbb{E}(f(X | X_1=x_1))\), \(f_2(x_1, x_2) = \mathbb{E}(f(X | X_2=x_2))\) and \(f_{1,2}(x_1, x_2) = \mathbb{E}(f(X | X_1=x_1, X_2=x_2)) = f(x_1, x_2)\)&#160;<a href="#fnref:10" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:11" role="doc-endnote">
-<p>This recent preprint by Plischke et al. improves Shapley effects computation by several orders of magnitude: <a href="https://arxiv.org/pdf/2002.12024.pdf">Plischke, E., Rabitti, G., &amp; Borgonovo, E. (2020). Computing Shapley Effects for Sensitivity Analysis. arXiv preprint arXiv:2002.12024.</a> <a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:11">
+<p>This recent preprint by Plischke et al. improves Shapley effects computation by several orders of magnitude: <a href="https://arxiv.org/pdf/2002.12024.pdf">Plischke, E., Rabitti, G., &amp; Borgonovo, E. (2020). Computing Shapley Effects for Sensitivity Analysis. arXiv preprint arXiv:2002.12024.</a>&#160;<a href="#fnref:11" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
-<li id="fn:12" role="doc-endnote">
-<p><a href="https://hal.archives-ouvertes.fr/hal-01897642/document">Bachoc, F., Gamboa, F., Loubes, J. M., &amp; Risser, L. (2018). Entropic Variable Boosting for Explainability &amp; Interpretability in Machine Learning.</a> <a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+<li id="fn:12">
+<p><a href="https://hal.archives-ouvertes.fr/hal-01897642/document">Bachoc, F., Gamboa, F., Loubes, J. M., &amp; Risser, L. (2018). Entropic Variable Boosting for Explainability &amp; Interpretability in Machine Learning.</a>&#160;<a href="#fnref:12" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
 </li>
 </ol>
-</section>
+</div>
 
         </div>
 
@@ -742,76 +672,11 @@ function clearActiveStatesInTableOfContents() {
   
 
   <footer>
-    <ul class="stats">
-  <li class="categories">
-    <ul>
-        
-    </ul>
-  </li>
-  <li class="tags">
-    <ul>
-        
-            
-            
-                <i class="fa fa-tags"></i>
-                
-                
-                <li><a class="article-category-link" href="/tags/ideas">ideas</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/feature-importance">feature importance</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/xai">XAI</a></li>
-                
-                
-                <li><a class="article-category-link" href="/tags/some-math">some math</a></li>
-                
-            
-        
-    </ul>
-  </li>
-</ul>
-
+    
   </footer>
 
 </article>
 
-    <article class="post">
-        <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "datajms-com" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </article>
-
-
-<ul class="actions pagination">
-    
-        <li><a href="/post/covid_variable_importances_shapley/"
-                class="button big previous">Breaking down factors of Covid-19 orientation algorithm by importance</a></li>
-    
-
-    
-        <li><a href="/post/chatgpt_country_guardrails_study/"
-                class="button big next">Exploring ChatGPT guardails: from protected to forgotten countries (Part 1)</a></li>
-    
-</ul>
 
 
     </div>
@@ -850,11 +715,7 @@ function clearActiveStatesInTableOfContents() {
 
     
     <script>hljs.initHighlightingOnLoad();</script>
-      <script src="//yihui.name/js/math-code.js"></script>
-<script async
-src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
-
+      
 
   </body>
 </html>

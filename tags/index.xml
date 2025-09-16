@@ -4,129 +4,100 @@
     <title>Tags on Trusted AI Ideas</title>
     <link>/tags/</link>
     <description>Recent content in Tags on Trusted AI Ideas</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 14 Jun 2023 12:16:19 +0100</lastBuildDate>
-    
-	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>ai regulation</title>
+      <title>Ai Regulation</title>
       <link>/tags/ai-regulation/</link>
       <pubDate>Wed, 14 Jun 2023 12:16:19 +0100</pubDate>
-      
       <guid>/tags/ai-regulation/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>eu ai act</title>
+      <title>Eu Ai Act</title>
       <link>/tags/eu-ai-act/</link>
       <pubDate>Wed, 14 Jun 2023 12:16:19 +0100</pubDate>
-      
       <guid>/tags/eu-ai-act/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>innovation</title>
+      <title>Innovation</title>
       <link>/tags/innovation/</link>
       <pubDate>Wed, 14 Jun 2023 12:16:19 +0100</pubDate>
-      
       <guid>/tags/innovation/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>fairness</title>
+      <title>Fairness</title>
       <link>/tags/fairness/</link>
       <pubDate>Fri, 24 Feb 2023 12:16:19 +0100</pubDate>
-      
       <guid>/tags/fairness/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>ideas</title>
+      <title>Ideas</title>
       <link>/tags/ideas/</link>
       <pubDate>Fri, 24 Feb 2023 12:16:19 +0100</pubDate>
-      
       <guid>/tags/ideas/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>large language model</title>
+      <title>Large Language Model</title>
       <link>/tags/large-language-model/</link>
       <pubDate>Fri, 24 Feb 2023 12:16:19 +0100</pubDate>
-      
       <guid>/tags/large-language-model/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>feature importance</title>
+      <title>Feature Importance</title>
       <link>/tags/feature-importance/</link>
       <pubDate>Sat, 16 May 2020 15:36:11 +0200</pubDate>
-      
       <guid>/tags/feature-importance/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>some math</title>
+      <title>Some Math</title>
       <link>/tags/some-math/</link>
       <pubDate>Sat, 16 May 2020 15:36:11 +0200</pubDate>
-      
       <guid>/tags/some-math/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>XAI</title>
       <link>/tags/xai/</link>
       <pubDate>Sat, 16 May 2020 15:36:11 +0200</pubDate>
-      
       <guid>/tags/xai/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Covid-19</title>
       <link>/tags/covid-19/</link>
       <pubDate>Fri, 01 May 2020 15:15:56 +0200</pubDate>
-      
       <guid>/tags/covid-19/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>with code</title>
+      <title>With Code</title>
       <link>/tags/with-code/</link>
       <pubDate>Fri, 01 May 2020 15:15:56 +0200</pubDate>
-      
       <guid>/tags/with-code/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>algorithm</title>
+      <title>Algorithm</title>
       <link>/tags/algorithm/</link>
       <pubDate>Fri, 17 Apr 2020 08:51:53 +0200</pubDate>
-      
       <guid>/tags/algorithm/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>no math</title>
+      <title>No Math</title>
       <link>/tags/no-math/</link>
       <pubDate>Fri, 17 Apr 2020 08:51:53 +0200</pubDate>
-      
       <guid>/tags/no-math/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

@@ -1,119 +1,79 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>/tags/ai-regulation/</loc>
     <lastmod>2023-06-14T12:16:19+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/eu-ai-act/</loc>
     <lastmod>2023-06-14T12:16:19+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/sme_startup_eu_ai_act/</loc>
     <lastmod>2023-06-14T12:16:19+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/innovation/</loc>
     <lastmod>2023-06-14T12:16:19+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/</loc>
     <lastmod>2023-06-14T12:16:19+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/</loc>
     <lastmod>2023-06-14T12:16:19+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/</loc>
     <lastmod>2023-06-14T12:16:19+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/chatgpt_country_guardrails_study/</loc>
     <lastmod>2023-02-24T12:16:19+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/fairness/</loc>
     <lastmod>2023-02-24T12:16:19+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/ideas/</loc>
     <lastmod>2023-02-24T12:16:19+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/large-language-model/</loc>
     <lastmod>2023-02-24T12:16:19+01:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/variable_importance_feature_attribution/</loc>
     <lastmod>2020-05-16T15:36:11+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/feature-importance/</loc>
     <lastmod>2020-05-16T15:36:11+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/some-math/</loc>
     <lastmod>2020-05-16T15:36:11+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/xai/</loc>
     <lastmod>2020-05-16T15:36:11+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/covid_variable_importances_shapley/</loc>
     <lastmod>2020-05-01T15:15:56+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/covid-19/</loc>
     <lastmod>2020-05-01T15:15:56+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/with-code/</loc>
     <lastmod>2020-05-01T15:15:56+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/about/</loc>
     <lastmod>2020-04-17T16:51:53+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/algorithm/</loc>
     <lastmod>2020-04-17T08:51:53+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/tags/no-math/</loc>
     <lastmod>2020-04-17T08:51:53+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>/post/covid_scoring_system_presentation/</loc>
     <lastmod>2020-04-17T08:51:53+02:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/post/chatgpt_country_guardrails_study/country_results/</loc>
+  </url><url>
+    <loc>/post/chatgpt_country_guardrails_study/country_score_scatterplot/</loc>
+  </url><url>
+    <loc>/post/chatgpt_country_guardrails_study/poem_rate_histogram/</loc>
+  </url><url>
     <loc>/categories/</loc>
   </url>
-  
 </urlset>
